@@ -174,4 +174,95 @@
             }, 2000);
         }, 1500);
     });
+
+    // ── Mobile Menu ────────────────────────────────────────────────────────────
+    const hamburger = document.querySelector('nav button.md\\:hidden');
+    const desktopMenu = document.querySelector('nav .hidden.md\\:flex');
+
+    if (hamburger && desktopMenu) {
+        // Build drawer by cloning nav links from the desktop menu
+        const drawer = document.createElement('div');
+        drawer.id = 'mobile-drawer';
+        drawer.setAttribute('aria-hidden', 'true');
+
+        // Copy current page's nav links
+        const links = Array.from(desktopMenu.querySelectorAll('a'));
+        const linksHTML = links.map(a =>
+            `<a href="${a.getAttribute('href')}" class="block px-gutter py-4 font-label-md text-label-md text-on-surface-variant hover:text-primary hover:bg-surface-container-low border-b border-border-subtle transition-colors">${a.textContent.trim()}</a>`
+        ).join('');
+
+        drawer.innerHTML = `
+            <div class="flex flex-col">
+                ${linksHTML}
+                <div class="px-gutter py-4">
+                    <button data-contact-trigger
+                        class="w-full bg-primary text-on-primary px-6 py-3 rounded-lg font-label-md text-label-md hover:opacity-80 transition-opacity">
+                        Contact Me
+                    </button>
+                </div>
+            </div>`;
+
+        // Style the drawer — slides down under the nav
+        Object.assign(drawer.style, {
+            position:   'fixed',
+            top:        '57px',          // nav height
+            left:       '0',
+            right:      '0',
+            zIndex:     '49',
+            background: 'rgba(250,248,255,0.97)',
+            backdropFilter: 'blur(12px)',
+            borderBottom: '1px solid #E2E8F0',
+            boxShadow: '0 8px 24px rgba(0,0,0,0.08)',
+            transform:  'translateY(-8px)',
+            opacity:    '0',
+            pointerEvents: 'none',
+            transition: 'transform 0.22s ease, opacity 0.22s ease',
+        });
+
+        document.body.appendChild(drawer);
+
+        // Wire up the "Contact Me" inside the drawer
+        drawer.querySelector('[data-contact-trigger]').addEventListener('click', () => {
+            closeDrawer();
+            openModal();
+        });
+
+        let drawerOpen = false;
+        const icon = hamburger.querySelector('.material-symbols-outlined');
+
+        function openDrawer() {
+            drawerOpen = true;
+            drawer.style.transform  = 'translateY(0)';
+            drawer.style.opacity    = '1';
+            drawer.style.pointerEvents = 'auto';
+            drawer.setAttribute('aria-hidden', 'false');
+            icon.textContent = 'close';
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeDrawer() {
+            drawerOpen = false;
+            drawer.style.transform  = 'translateY(-8px)';
+            drawer.style.opacity    = '0';
+            drawer.style.pointerEvents = 'none';
+            drawer.setAttribute('aria-hidden', 'true');
+            icon.textContent = 'menu';
+            document.body.style.overflow = '';
+        }
+
+        hamburger.addEventListener('click', () => drawerOpen ? closeDrawer() : openDrawer());
+
+        // Close on Escape or when clicking outside
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && drawerOpen) closeDrawer();
+        });
+        document.addEventListener('click', (e) => {
+            if (drawerOpen && !drawer.contains(e.target) && !hamburger.contains(e.target)) closeDrawer();
+        });
+
+        // Close drawer when viewport reaches md breakpoint
+        window.matchMedia('(min-width: 768px)').addEventListener('change', (e) => {
+            if (e.matches && drawerOpen) closeDrawer();
+        });
+    }
 })();
