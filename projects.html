@@ -1,315 +1,376 @@
 <!DOCTYPE html>
 <html class="light" lang="en">
+
 <head>
-<meta charset="utf-8">
-<meta content="width=device-width, initial-scale=1.0" name="viewport">
-<title>Projects | Shivani Nair</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Geist:wght@400;600;700&display=swap" rel="stylesheet">
-<script id="tailwind-config">
-    tailwind.config = {
-        darkMode: "class",
-        theme: {
-            extend: {
-                colors: {
-                    "primary": "#0c56d0",
-                    "on-primary": "#ffffff",
-                    "secondary": "#0040a2",
-                    "tertiary": "#a33500",
-                    "background": "#fcfcfc",
-                    "surface": "#ffffff",
-                    "on-surface": "#1a1c1e",
-                    "on-surface-variant": "#44474e",
-                    "outline": "#74777f",
-                    "outline-variant": "#c4c6d0",
-                    "surface-container-lowest": "#ffffff",
-                    "surface-container-low": "#f7f9ff",
-                    "surface-container": "#f0f2f7",
-                    "surface-container-high": "#ebeef5",
-                    "surface-container-highest": "#e2e2e6"
-                },
-                borderRadius: {
-                    "DEFAULT": "0.125rem",
-                    "lg": "0.25rem",
-                    "xl": "0.5rem",
-                    "full": "0.75rem"
-                },
-                spacing: {
-                    "section-gap": "120px",
-                    "stack-md": "16px",
-                    "stack-sm": "8px",
-                    "gutter": "24px",
-                    "container-max": "1200px",
-                    "stack-xs": "4px",
-                    "margin-mobile": "20px",
-                    "stack-lg": "32px"
-                },
-                fontFamily: {
-                    "label-mono": ["JetBrains Mono"],
-                    "label-caps": ["Geist"],
-                    "body-lg": ["Geist"],
-                    "headline-lg": ["Geist"],
-                    "headline-lg-mobile": ["Geist"],
-                    "display-xl": ["Geist"],
-                    "body-md": ["Geist"],
-                    "headline-md": ["Geist"]
-                },
-                fontSize: {
-                    "label-mono": ["13px", {"lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "500"}],
-                    "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
-                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
-                    "headline-lg": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.03em", "fontWeight": "600"}],
-                    "headline-lg-mobile": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "600"}],
-                    "display-xl": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.04em", "fontWeight": "700"}],
-                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
-                    "headline-md": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "600"}]
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Projects | Shivani Nair</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Geist:wght@400;600;700&display=swap"
+        rel="stylesheet">
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0c56d0",
+                        "on-primary": "#ffffff",
+                        "secondary": "#0040a2",
+                        "tertiary": "#a33500",
+                        "background": "#fcfcfc",
+                        "surface": "#ffffff",
+                        "on-surface": "#1a1c1e",
+                        "on-surface-variant": "#44474e",
+                        "outline": "#74777f",
+                        "outline-variant": "#c4c6d0",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container-low": "#f7f9ff",
+                        "surface-container": "#f0f2f7",
+                        "surface-container-high": "#ebeef5",
+                        "surface-container-highest": "#e2e2e6"
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    spacing: {
+                        "section-gap": "120px",
+                        "stack-md": "16px",
+                        "stack-sm": "8px",
+                        "gutter": "24px",
+                        "container-max": "1200px",
+                        "stack-xs": "4px",
+                        "margin-mobile": "20px",
+                        "stack-lg": "32px"
+                    },
+                    fontFamily: {
+                        "label-mono": ["JetBrains Mono"],
+                        "label-caps": ["Geist"],
+                        "body-lg": ["Geist"],
+                        "headline-lg": ["Geist"],
+                        "headline-lg-mobile": ["Geist"],
+                        "display-xl": ["Geist"],
+                        "body-md": ["Geist"],
+                        "headline-md": ["Geist"]
+                    },
+                    fontSize: {
+                        "label-mono": ["13px", { "lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "500" }],
+                        "label-caps": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "headline-lg": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.03em", "fontWeight": "600" }],
+                        "headline-lg-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+                        "display-xl": ["64px", { "lineHeight": "72px", "letterSpacing": "-0.04em", "fontWeight": "700" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "600" }]
+                    }
                 }
             }
         }
-    }
-</script>
-<style>
-    body { background-color: #fcfcfc; color: #1a1c1e; -webkit-font-smoothing: antialiased; }
-    .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; vertical-align: middle; }
-    .project-card { transition: all 0.3s ease; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
-    .project-card:hover { border-color: #0c56d0; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.1); }
-    .section-divider { width: 100%; height: 1px; background: linear-gradient(90deg, transparent, #c4c6d0, transparent); }
-</style>
+    </script>
+    <style>
+        body {
+            background-color: #fcfcfc;
+            color: #1a1c1e;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+
+        .project-card {
+            transition: all 0.3s ease;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+        }
+
+        .project-card:hover {
+            border-color: #0c56d0;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+
+        .section-divider {
+            width: 100%;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #c4c6d0, transparent);
+        }
+    </style>
 </head>
+
 <body class="overflow-x-hidden font-body-md">
 
-<!-- TopNavBar -->
-<nav class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-outline-variant">
-    <div class="flex justify-between items-center h-16 px-gutter max-w-container-max mx-auto">
-        <a href="index.html" class="font-headline-md text-headline-md font-bold text-on-surface">Shivani Nair</a>
-        <div class="hidden md:flex gap-stack-lg items-center">
-            <a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors" href="index.html#home">Home</a>
-            <a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors" href="index.html#about">About</a>
-            <a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors" href="index.html#stack">Stack</a>
-            <a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors" href="index.html#experience">Experience</a>
-            <a class="font-label-caps text-label-caps text-primary font-bold border-b-2 border-primary pb-1" href="projects.html">Projects</a>
-        </div>
-        <div class="flex items-center gap-stack-md">
-            <button class="material-symbols-outlined text-on-surface-variant hover:text-primary transition-all">light_mode</button>
-            <button class="md:hidden material-symbols-outlined text-on-surface">menu</button>
-        </div>
-    </div>
-</nav>
-
-<main class="mt-32 mb-section-gap px-gutter max-w-container-max mx-auto">
-
-    <!-- Page Header -->
-    <header class="mb-stack-lg max-w-2xl">
-        <h1 class="font-display-xl text-display-xl text-on-surface mb-stack-sm">Featured Work</h1>
-        <p class="font-body-lg text-body-lg text-on-surface-variant">Showcasing projects involving API development, workflow automation, cloud integrations, and backend architecture for modern business applications.</p>
-    </header>
-
-    <div class="section-divider my-stack-lg opacity-60"></div>
-
-    <!-- Project Grid -->
-    <div class="flex flex-col gap-section-gap">
-
-        <!-- Project 1: Ticketing -->
-        <article class="project-card bg-surface border border-outline-variant rounded-xl p-stack-lg opacity-0 translate-y-8 transition-all duration-700">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-stack-lg">
-                <div class="lg:col-span-8">
-                    <div class="flex items-center justify-between mb-stack-md">
-                        <span class="font-label-caps text-label-caps bg-surface-container-high px-stack-sm py-stack-xs rounded border border-outline-variant text-primary uppercase">Project 01 / Infrastructure</span>
-                        <span class="font-label-mono text-label-mono bg-primary/10 text-primary px-3 py-1 rounded-full">Deployed</span>
-                    </div>
-                    <h2 class="font-headline-lg text-headline-lg mb-stack-md text-on-surface">Ticketing Management System</h2>
-                    <div class="space-y-stack-lg">
-                        <div>
-                            <h3 class="font-label-caps text-label-caps text-primary mb-stack-xs uppercase">Overview</h3>
-                            <p class="font-body-md text-body-md text-on-surface-variant">A high-throughput visitor management and digital ticketing engine designed for large-scale events. Focused on sub-second QR validation and distributed backend consistency.</p>
-                        </div>
-                        <div class="grid md:grid-cols-2 gap-stack-lg">
-                            <div>
-                                <h3 class="font-label-caps text-label-caps text-primary mb-stack-xs uppercase">Business Challenge</h3>
-                                <p class="font-body-md text-body-md text-on-surface-variant">Legacy systems suffered from 3-second latency during entry scans, leading to significant bottlenecks at physical gates.</p>
-                            </div>
-                            <div>
-                                <h3 class="font-label-caps text-label-caps text-primary mb-stack-xs uppercase">Solution</h3>
-                                <p class="font-body-md text-body-md text-on-surface-variant">Implemented a Redis-backed validation layer and an asynchronous event architecture to decouple frontends.</p>
-                            </div>
-                        </div>
-                        <div>
-                            <h3 class="font-label-caps text-label-caps text-primary mb-stack-xs uppercase">Key Outcomes</h3>
-                            <ul class="grid md:grid-cols-2 gap-stack-xs list-none">
-                                <li class="flex items-start gap-2 font-body-md text-body-md text-on-surface">
-                                    <span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">check_circle</span>
-                                    <span>99.99% Uptime during peak events.</span>
-                                </li>
-                                <li class="flex items-start gap-2 font-body-md text-body-md text-on-surface">
-                                    <span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">check_circle</span>
-                                    <span>Latency reduced to &lt;200ms.</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="lg:col-span-4 flex flex-col gap-stack-lg">
-                    <div class="h-64 bg-surface-container-high rounded-xl overflow-hidden border border-outline-variant">
-                        <img class="w-full h-full object-cover opacity-90 hover:opacity-100 transition-all duration-500" alt="Dashboard with real-time data visualizations" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC9jtrWUP9ig8aDQGW051rbFn_Fx_OeEbJ3lZRA8algAxA71RFBGc7FgWRBaSsUoIrUuLYeXQ33YfInyM8RU5-gIgIlwWUzMJH65WUDyYYcYw8HeC8GPGMfA5mUfhuFBL_psVEbsv-rIpsMJciEy2cHmMNWPUYuZqfCq2b4Pr2UVFNOfUGvhSt_OCzbZhjI6uncNCdA3Omm8NygwBMUmEv60i7u54WrcqeR2JPbaHJ04ufTnTBaANbPMbCIAM0hOKTAWn4bspcE5is">
-                    </div>
-                    <div>
-                        <h3 class="font-label-caps text-label-caps text-primary mb-stack-sm uppercase">Tech Stack</h3>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="bg-surface-container px-3 py-1 rounded-full font-label-mono text-label-mono text-on-surface-variant border border-outline-variant">Node.js</span>
-                            <span class="bg-surface-container px-3 py-1 rounded-full font-label-mono text-label-mono text-on-surface-variant border border-outline-variant">Redis</span>
-                            <span class="bg-surface-container px-3 py-1 rounded-full font-label-mono text-label-mono text-on-surface-variant border border-outline-variant">PostgreSQL</span>
-                            <span class="bg-surface-container px-3 py-1 rounded-full font-label-mono text-label-mono text-on-surface-variant border border-outline-variant">AWS Lambda</span>
-                        </div>
-                    </div>
-                </div>
+    <!-- TopNavBar -->
+    <nav class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-outline-variant">
+        <div class="flex justify-between items-center h-16 px-gutter max-w-container-max mx-auto">
+            <a href="index.html" class="font-headline-md text-headline-md font-bold text-on-surface">Shivani Nair</a>
+            <div class="hidden md:flex gap-stack-lg items-center">
+                <a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors"
+                    href="index.html#home">Home</a>
+                <a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors"
+                    href="index.html#about">About</a>
+                <a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors"
+                    href="index.html#stack">Tech Stack</a>
+                <a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors"
+                    href="index.html#experience">Experience</a>
+                <a class="font-label-caps text-label-caps text-primary font-bold border-b-2 border-primary pb-1"
+                    href="projects.html">Projects</a>
             </div>
-        </article>
-
-        <!-- Project 2: Wellness -->
-        <article class="project-card bg-surface border border-outline-variant rounded-xl p-stack-lg opacity-0 translate-y-8 transition-all duration-700">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-stack-lg">
-                <div class="lg:col-span-8">
-                    <div class="flex items-center justify-between mb-stack-md">
-                        <span class="font-label-caps text-label-caps bg-surface-container-high px-stack-sm py-stack-xs rounded border border-outline-variant text-tertiary uppercase">Project 02 / Health-Tech</span>
-                        <span class="font-label-mono text-label-mono bg-tertiary/10 text-tertiary px-3 py-1 rounded-full">Scaling</span>
-                    </div>
-                    <h2 class="font-headline-lg text-headline-lg mb-stack-md text-on-surface">Wellness &amp; Period Tracking Platform</h2>
-                    <div class="space-y-stack-lg">
-                        <div>
-                            <h3 class="font-label-caps text-label-caps text-tertiary mb-stack-xs uppercase">Overview</h3>
-                            <p class="font-body-md text-body-md text-on-surface-variant">A privacy-first health tracking engine designed for longitudinal data analysis and personalized wellness insights.</p>
-                        </div>
-                        <div class="grid md:grid-cols-2 gap-stack-lg">
-                            <div>
-                                <h3 class="font-label-caps text-label-caps text-tertiary mb-stack-xs uppercase">Business Challenge</h3>
-                                <p class="font-body-md text-body-md text-on-surface-variant">Handling highly sensitive medical data requires strict encryption standards and GDPR compliance.</p>
-                            </div>
-                            <div>
-                                <h3 class="font-label-caps text-label-caps text-tertiary mb-stack-xs uppercase">Solution</h3>
-                                <p class="font-body-md text-body-md text-on-surface-variant">Developed an end-to-end encrypted microservices architecture with zero-knowledge data storage.</p>
-                            </div>
-                        </div>
-                        <div>
-                            <h3 class="font-label-caps text-label-caps text-tertiary mb-stack-xs uppercase">Key Outcomes</h3>
-                            <ul class="grid md:grid-cols-2 gap-stack-xs list-none">
-                                <li class="flex items-start gap-2 font-body-md text-body-md text-on-surface">
-                                    <span class="material-symbols-outlined text-tertiary" style="font-variation-settings: 'FILL' 1;">security</span>
-                                    <span>HIPAA &amp; GDPR Compliant architecture.</span>
-                                </li>
-                                <li class="flex items-start gap-2 font-body-md text-body-md text-on-surface">
-                                    <span class="material-symbols-outlined text-tertiary" style="font-variation-settings: 'FILL' 1;">query_stats</span>
-                                    <span>40% increase in user retention.</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="lg:col-span-4 flex flex-col gap-stack-lg">
-                    <div class="h-64 bg-surface-container-high rounded-xl overflow-hidden border border-outline-variant">
-                        <img class="w-full h-full object-cover opacity-90 hover:opacity-100 transition-all duration-500" alt="Health data visualization interface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCL-W1kFX9O0CyT0tiECmcKDrFwjRciwl8Itco1EixJGtiGigp5UJMLMwAteNGunsXxOXiPt996AMNRS0p78fFOIAW6svayNSgPrhcKKwAmsk2EvmAe9i-ztXORWJ1vY_6_hOk_baaskgg30_aC9NkTytBrEQZSboVTFTlkTKq5q7dtxcqXF-DeN8KhEWh8pYHHBDLi1rKHcUR-3mfgOXiYFAdPjoXk7xqViwb1Qx25_pJ2aFYfJeWHaWILZTdkV-5gtegHdtWUXgo">
-                    </div>
-                    <div>
-                        <h3 class="font-label-caps text-label-caps text-tertiary mb-stack-sm uppercase">Tech Stack</h3>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="bg-surface-container px-3 py-1 rounded-full font-label-mono text-label-mono text-on-surface-variant border border-outline-variant">Python / Django</span>
-                            <span class="bg-surface-container px-3 py-1 rounded-full font-label-mono text-label-mono text-on-surface-variant border border-outline-variant">MongoDB</span>
-                            <span class="bg-surface-container px-3 py-1 rounded-full font-label-mono text-label-mono text-on-surface-variant border border-outline-variant">Keycloak</span>
-                        </div>
-                    </div>
-                </div>
+            <div class="flex items-center gap-stack-md">
+                <button
+                    class="material-symbols-outlined text-on-surface-variant hover:text-primary transition-all">light_mode</button>
+                <button class="md:hidden material-symbols-outlined text-on-surface">menu</button>
             </div>
-        </article>
-
-        <!-- Project 3: Transport -->
-        <article class="project-card bg-surface border border-outline-variant rounded-xl p-stack-lg opacity-0 translate-y-8 transition-all duration-700">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-stack-lg">
-                <div class="lg:col-span-8">
-                    <div class="flex items-center justify-between mb-stack-md">
-                        <span class="font-label-caps text-label-caps bg-surface-container-high px-stack-sm py-stack-xs rounded border border-outline-variant text-secondary uppercase">Project 03 / Operations</span>
-                        <span class="font-label-mono text-label-mono bg-secondary/10 text-secondary px-3 py-1 rounded-full">Enterprise</span>
-                    </div>
-                    <h2 class="font-headline-lg text-headline-lg mb-stack-md text-on-surface">Enterprise Transport Management System</h2>
-                    <div class="space-y-stack-lg">
-                        <div>
-                            <h3 class="font-label-caps text-label-caps text-secondary mb-stack-xs uppercase">Overview</h3>
-                            <p class="font-body-md text-body-md text-on-surface-variant">A comprehensive fleet management suite for logistics providers. Includes real-time route optimization and automated dispatching.</p>
-                        </div>
-                        <div class="grid md:grid-cols-2 gap-stack-lg">
-                            <div>
-                                <h3 class="font-label-caps text-label-caps text-secondary mb-stack-xs uppercase">Business Challenge</h3>
-                                <p class="font-body-md text-body-md text-on-surface-variant">Manual route allocation resulted in a 15% fuel waste and frequent scheduling conflicts.</p>
-                            </div>
-                            <div>
-                                <h3 class="font-label-caps text-label-caps text-secondary mb-stack-xs uppercase">Solution</h3>
-                                <p class="font-body-md text-body-md text-on-surface-variant">Engineered a custom heuristic route-planning algorithm and MQTT real-time tracking gateway.</p>
-                            </div>
-                        </div>
-                        <div>
-                            <h3 class="font-label-caps text-label-caps text-secondary mb-stack-xs uppercase">Key Outcomes</h3>
-                            <ul class="grid md:grid-cols-2 gap-stack-xs list-none">
-                                <li class="flex items-start gap-2 font-body-md text-body-md text-on-surface">
-                                    <span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">route</span>
-                                    <span>22% Reduction in fuel consumption.</span>
-                                </li>
-                                <li class="flex items-start gap-2 font-body-md text-body-md text-on-surface">
-                                    <span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">precision_manufacturing</span>
-                                    <span>100% Automated operational scheduling.</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="lg:col-span-4 flex flex-col gap-stack-lg">
-                    <div class="h-64 bg-surface-container-high rounded-xl overflow-hidden border border-outline-variant">
-                        <img class="w-full h-full object-cover opacity-90 hover:opacity-100 transition-all duration-500" alt="Futuristic map interface with interconnected route lines" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB84qH-hREV1QZi_GWtT__3Ri5DBosZaFzZrsxA3ZHV4UjxRoXq4WEgUSr-sgkcChW38dzOLcG46elqzXSc-9HIaWM6PzBYIh6zf3vo1A3am2hquipkJOG2penly9zCl7_sshOTgo9l7Q9vFPbD4bhCUu0yqtEUbgCwxVjYbTVlT1GmsdilKLcLJCeIMzsFgIlGALcgAivHfGzeR2GlICqup1TMmuJFxtD9D4m-G4vIi3tbAdPtQjkK1AHUrFf7EHNl3vuSyOmmz7k">
-                    </div>
-                    <div>
-                        <h3 class="font-label-caps text-label-caps text-secondary mb-stack-sm uppercase">Tech Stack</h3>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="bg-surface-container px-3 py-1 rounded-full font-label-mono text-label-mono text-on-surface-variant border border-outline-variant">Go (Golang)</span>
-                            <span class="bg-surface-container px-3 py-1 rounded-full font-label-mono text-label-mono text-on-surface-variant border border-outline-variant">RabbitMQ</span>
-                            <span class="bg-surface-container px-3 py-1 rounded-full font-label-mono text-label-mono text-on-surface-variant border border-outline-variant">Elasticsearch</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </article>
-
-    </div>
-</main>
-
-<!-- Footer -->
-<footer class="w-full py-stack-lg border-t border-outline-variant bg-surface mt-section-gap">
-    <div class="flex flex-col md:flex-row justify-between items-center gap-stack-md max-w-container-max mx-auto px-gutter">
-        <div class="font-label-caps text-label-caps text-on-surface font-bold">SHIVANI NAIR</div>
-        <p class="font-body-md text-body-md text-on-surface-variant">© 2026 Shivani Nair. Built for performance.</p>
-        <div class="flex gap-stack-lg">
-            <a class="font-body-md text-body-md text-on-surface-variant hover:text-primary underline transition-all" href="https://github.com" target="_blank" rel="noopener noreferrer">GitHub</a>
-            <a class="font-body-md text-body-md text-on-surface-variant hover:text-primary underline transition-all" href="https://www.linkedin.com/in/shivaninair12/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-            <a class="font-body-md text-body-md text-on-surface-variant hover:text-primary underline transition-all" href="mailto:shivani.nair1201@gmail.com">Email</a>
         </div>
-    </div>
-</footer>
+    </nav>
 
-<script>
-    // Hover lift on project cards
-    document.querySelectorAll('.project-card').forEach(card => {
-        card.addEventListener('mouseenter', () => card.style.transform = 'translateY(-4px)');
-        card.addEventListener('mouseleave', () => card.style.transform = 'translateY(0px)');
-    });
+    <main class="mt-32 mb-section-gap px-gutter max-w-container-max mx-auto">
 
-    // Scroll-reveal for project cards
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('opacity-100', 'translate-y-0');
-                entry.target.classList.remove('opacity-0', 'translate-y-8');
-            }
+        <!-- Page Header -->
+        <header class="mb-stack-lg max-w-2xl">
+            <h1 class="font-display-xl text-display-xl text-on-surface mb-stack-sm">Projects & Case Studies</h1>
+            <p class="font-body-lg text-body-lg text-on-surface-variant">
+                A selection of backend systems and business applications I've contributed to, focused on API
+                development, workflow automation, system integrations, and operational efficiency.
+            </p>
+        </header>
+
+        <div class="section-divider my-stack-lg opacity-60"></div>
+
+        <!-- Project Grid -->
+        <div class="flex flex-col gap-section-gap">
+
+            <!-- Project 1: Ticketing -->
+            <article
+                class="project-card bg-surface border border-outline-variant rounded-xl p-stack-lg opacity-0 translate-y-8 transition-all duration-700">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-stack-lg">
+                    <div class="lg:col-span-8">
+                        <!-- <div class="flex items-center justify-between mb-stack-md">
+                            <span
+                                class="font-label-caps text-label-caps bg-surface-container-high px-stack-sm py-stack-xs rounded border border-outline-variant text-primary uppercase">Project
+                                01 / Infrastructure</span>
+                            <span
+                                class="font-label-mono text-label-mono bg-primary/10 text-primary px-3 py-1 rounded-full">Deployed</span>
+                        </div> -->
+                        <h2 class="font-headline-lg text-headline-lg mb-stack-md text-on-surface">Ticketing Management
+                            System</h2>
+                        <div class="space-y-stack-lg">
+                            <div>
+
+                                <p class="font-body-md text-body-md text-on-surface-variant">
+                                    Built backend modules for visitor and ticket management workflows used to streamline
+                                    event operations and entry management.
+                                </p>
+                            </div>
+                            <div>
+                                <h3 class="font-label-caps text-label-caps text-primary mb-stack-xs uppercase">Overview
+                                </h3>
+                                <p class="font-body-md text-body-md text-on-surface-variant">
+                                    Developed APIs for ticket creation, visitor registration, group bookings, and entry
+                                    validation. The system was designed to simplify ticket handling while supporting
+                                    efficient event management processes.
+                                </p>
+                            </div>
+                            <div class=" gap-stack-lg">
+                                <div>
+                                    <h3 class="font-label-caps text-label-caps text-primary mb-stack-xs uppercase">
+                                        Key Contributions
+                                    </h3>
+                                    <p class="font-body-md text-body-md text-on-surface-variant">
+                                        • Developed backend APIs for ticket and visitor management<br>
+                                        • Implemented group-based ticket creation workflows<br>
+                                        • Built scan and check-in functionality for ticket validation<br>
+                                        • Improved operational efficiency through centralized management<br>
+                                    </p>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="lg:col-span-4 flex flex-col gap-stack-lg">
+                        <div
+                            class="h-64 bg-surface-container-high rounded-xl overflow-hidden border border-outline-variant">
+                            <img class="w-full h-full object-cover opacity-90 hover:opacity-100 transition-all duration-500"
+                                alt="Dashboard with real-time data visualizations"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuC9jtrWUP9ig8aDQGW051rbFn_Fx_OeEbJ3lZRA8algAxA71RFBGc7FgWRBaSsUoIrUuLYeXQ33YfInyM8RU5-gIgIlwWUzMJH65WUDyYYcYw8HeC8GPGMfA5mUfhuFBL_psVEbsv-rIpsMJciEy2cHmMNWPUYuZqfCq2b4Pr2UVFNOfUGvhSt_OCzbZhjI6uncNCdA3Omm8NygwBMUmEv60i7u54WrcqeR2JPbaHJ04ufTnTBaANbPMbCIAM0hOKTAWn4bspcE5is">
+                        </div>
+                        <div>
+                            <h3 class="font-label-caps text-label-caps text-primary mb-stack-sm uppercase">Tech Stack
+                            </h3>
+                            <div class="flex flex-wrap gap-2">
+                                <span
+                                    class="bg-surface-container px-3 py-1 rounded-full font-label-mono text-label-mono text-on-surface-variant border border-outline-variant">PHP</span>
+                                <span
+                                    class="bg-surface-container px-3 py-1 rounded-full font-label-mono text-label-mono text-on-surface-variant border border-outline-variant">MySQL</span>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Project 2: Wellness -->
+            <article
+                class="project-card bg-surface border border-outline-variant rounded-xl p-stack-lg opacity-0 translate-y-8 transition-all duration-700">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-stack-lg">
+                    <div class="lg:col-span-8">
+
+                        <h2 class="font-headline-lg text-headline-lg mb-stack-md text-on-surface">Wellness &amp; Period
+                            Tracking Platform</h2>
+                        <div class="space-y-stack-lg">
+                            <div>
+
+                                <p class="font-body-md text-body-md text-on-surface-variant">
+                                    Contributed to the backend development of a health and wellness platform focused on
+                                    tracking, consultation services, and user engagement.
+                                </p>
+                            </div>
+                            <div>
+                                <h3 class="font-label-caps text-label-caps text-tertiary mb-stack-xs uppercase">Overview
+                                </h3>
+                                <p class="font-body-md text-body-md text-on-surface-variant">
+                                    Worked on backend services supporting period tracking, user management, expert
+                                    consultation features, and automated notifications.
+                                </p>
+                            </div>
+                            <div class="gap-stack-lg">
+                                <div>
+                                    <h3 class="font-label-caps text-label-caps text-tertiary mb-stack-xs uppercase">
+                                        Key Contributions
+                                    </h3>
+                                    <p class="font-body-md text-body-md text-on-surface-variant">
+                                        • Developed APIs for health tracking features<br>
+                                        • Built consultation and user management modules<br>
+                                        • Implemented notification workflows<br>
+                                        • Supported secure handling of user-related data<br>
+                                    </p>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="lg:col-span-4 flex flex-col gap-stack-lg">
+                        <div
+                            class="h-64 bg-surface-container-high rounded-xl overflow-hidden border border-outline-variant">
+                            <img class="w-full h-full object-cover opacity-90 hover:opacity-100 transition-all duration-500"
+                                alt="Health data visualization interface"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCL-W1kFX9O0CyT0tiECmcKDrFwjRciwl8Itco1EixJGtiGigp5UJMLMwAteNGunsXxOXiPt996AMNRS0p78fFOIAW6svayNSgPrhcKKwAmsk2EvmAe9i-ztXORWJ1vY_6_hOk_baaskgg30_aC9NkTytBrEQZSboVTFTlkTKq5q7dtxcqXF-DeN8KhEWh8pYHHBDLi1rKHcUR-3mfgOXiYFAdPjoXk7xqViwb1Qx25_pJ2aFYfJeWHaWILZTdkV-5gtegHdtWUXgo">
+                        </div>
+                        <div>
+                            <h3 class="font-label-caps text-label-caps text-tertiary mb-stack-sm uppercase">Tech Stack
+                            </h3>
+                            <div class="flex flex-wrap gap-2">
+
+                                <span
+                                    class="bg-surface-container px-3 py-1 rounded-full font-label-mono text-label-mono text-on-surface-variant border border-outline-variant">Node.js</span>
+                                <span
+                                    class="bg-surface-container px-3 py-1 rounded-full font-label-mono text-label-mono text-on-surface-variant border border-outline-variant">MySQL</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Project 3: Transport -->
+            <article
+                class="project-card bg-surface border border-outline-variant rounded-xl p-stack-lg opacity-0 translate-y-8 transition-all duration-700">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-stack-lg">
+                    <div class="lg:col-span-8">
+
+                        <h2 class="font-headline-lg text-headline-lg mb-stack-md text-on-surface">Enterprise Transport
+                            Management System</h2>
+                        <div class="space-y-stack-lg">
+                            <div>
+                                <h3 class="font-label-caps text-label-caps text-secondary mb-stack-xs uppercase">
+                                    Overview</h3>
+                                <p class="font-body-md text-body-md text-on-surface-variant">
+                                    Backend system designed to support staff transportation operations, trip allocation,
+                                    attendance tracking, and route management.
+                                </p>
+                            </div>
+                            <div class="gap-stack-lg">
+                                <div>
+                                    <h3 class="font-label-caps text-label-caps text-secondary mb-stack-xs uppercase">
+                                        Key Contributions:</h3>
+                                    <p class="font-body-md text-body-md text-on-surface-variant">
+                                        • Developed APIs for transport requests and scheduling<br>
+                                        • Built trip allocation and route management modules<br>
+                                        • Implemented QR/scan-based attendance workflows<br>
+                                        • Supported operational tracking and reporting processes<br>
+                                    </p>
+                                </div>
+                               
+                            </div>
+                           
+                        </div>
+                    </div>
+                    <div class="lg:col-span-4 flex flex-col gap-stack-lg">
+                        <div
+                            class="h-64 bg-surface-container-high rounded-xl overflow-hidden border border-outline-variant">
+                            <img class="w-full h-full object-cover opacity-90 hover:opacity-100 transition-all duration-500"
+                                alt="Futuristic map interface with interconnected route lines"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuB84qH-hREV1QZi_GWtT__3Ri5DBosZaFzZrsxA3ZHV4UjxRoXq4WEgUSr-sgkcChW38dzOLcG46elqzXSc-9HIaWM6PzBYIh6zf3vo1A3am2hquipkJOG2penly9zCl7_sshOTgo9l7Q9vFPbD4bhCUu0yqtEUbgCwxVjYbTVlT1GmsdilKLcLJCeIMzsFgIlGALcgAivHfGzeR2GlICqup1TMmuJFxtD9D4m-G4vIi3tbAdPtQjkK1AHUrFf7EHNl3vuSyOmmz7k">
+                        </div>
+                        <div>
+                            <h3 class="font-label-caps text-label-caps text-secondary mb-stack-sm uppercase">Tech Stack
+                            </h3>
+                            <div class="flex flex-wrap gap-2">
+                               
+                                <span
+                                    class="bg-surface-container px-3 py-1 rounded-full font-label-mono text-label-mono text-on-surface-variant border border-outline-variant">PHP</span>
+                                <span
+                                    class="bg-surface-container px-3 py-1 rounded-full font-label-mono text-label-mono text-on-surface-variant border border-outline-variant">MySQL</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="w-full py-stack-lg border-t border-outline-variant bg-surface mt-section-gap">
+        <div
+            class="flex flex-col md:flex-row justify-between items-center gap-stack-md max-w-container-max mx-auto px-gutter">
+            <div class="font-label-caps text-label-caps text-on-surface font-bold">SHIVANI NAIR</div>
+            <p class="font-body-md text-body-md text-on-surface-variant">© 2026 Shivani Nair. Designed & Developed by Shivani Nair</p>
+            <div class="flex gap-stack-lg">
+                <a class="font-body-md text-body-md text-on-surface-variant hover:text-primary underline transition-all"
+                    href="https://www.linkedin.com/in/shivaninair12/" target="_blank"
+                    rel="noopener noreferrer">LinkedIn</a>
+                <a class="font-body-md text-body-md text-on-surface-variant hover:text-primary underline transition-all"
+                    href="mailto:shivani.nair1201@gmail.com">Email</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Hover lift on project cards
+        document.querySelectorAll('.project-card').forEach(card => {
+            card.addEventListener('mouseenter', () => card.style.transform = 'translateY(-4px)');
+            card.addEventListener('mouseleave', () => card.style.transform = 'translateY(0px)');
         });
-    }, { threshold: 0.1 });
 
-    document.querySelectorAll('.project-card').forEach(card => observer.observe(card));
-</script>
+        // Scroll-reveal for project cards
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-8');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.project-card').forEach(card => observer.observe(card));
+    </script>
 </body>
+
 </html>
