@@ -1,448 +1,581 @@
 <!DOCTYPE html>
 <html class="light" lang="en">
+
 <head>
-<meta charset="utf-8">
-<meta content="width=device-width, initial-scale=1.0" name="viewport">
-<title>Shivani Nair | Backend Software Developer</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Geist:wght@400;500;600;700&display=swap" rel="stylesheet">
-<script id="tailwind-config">
-    tailwind.config = {
-        darkMode: "class",
-        theme: {
-            extend: {
-                colors: {
-                    "inverse-primary": "#0c56d0",
-                    "primary-fixed": "#dae2ff",
-                    "on-tertiary-fixed": "#380d00",
-                    "on-primary-fixed": "#001848",
-                    "on-secondary-fixed": "#00174a",
-                    "on-secondary-container": "#001d4d",
-                    "error-container": "#ffdad6",
-                    "tertiary-fixed-dim": "#ffb59b",
-                    "surface-container-low": "#f7f7f7",
-                    "secondary": "#415f91",
-                    "surface-container-highest": "#e1e2e1",
-                    "on-surface-variant": "#44474e",
-                    "tertiary-container": "#ffdbcf",
-                    "on-primary": "#ffffff",
-                    "surface-container-high": "#ebebeb",
-                    "error": "#ba1a1a",
-                    "on-tertiary-fixed-variant": "#812800",
-                    "secondary-fixed-dim": "#b3c5ff",
-                    "surface-variant": "#dee2ef",
-                    "inverse-surface": "#2f3033",
-                    "primary-container": "#d8e2ff",
-                    "on-tertiary-container": "#380d00",
-                    "on-surface": "#1a1c1e",
-                    "surface": "#fdfcff",
-                    "on-primary-container": "#001a41",
-                    "surface-container": "#f1f0f4",
-                    "primary-fixed-dim": "#b2c5ff",
-                    "tertiary-fixed": "#ffdbcf",
-                    "on-secondary-fixed-variant": "#003ea6",
-                    "surface-tint": "#0058cc",
-                    "on-error-container": "#410002",
-                    "primary": "#0058cc",
-                    "surface-dim": "#dedbe0",
-                    "on-primary-fixed-variant": "#0040a2",
-                    "background": "#fdfcff",
-                    "secondary-container": "#d6e3ff",
-                    "outline-variant": "#c4c6d0",
-                    "surface-container-lowest": "#ffffff",
-                    "on-secondary": "#ffffff",
-                    "surface-bright": "#fdfcff",
-                    "tertiary": "#904b33",
-                    "inverse-on-surface": "#f1f0f4",
-                    "on-tertiary": "#ffffff",
-                    "on-background": "#1a1c1e",
-                    "on-error": "#ffffff",
-                    "outline": "#74777f",
-                    "secondary-fixed": "#dbe1ff"
-                },
-                borderRadius: {
-                    "DEFAULT": "0.125rem",
-                    "lg": "0.25rem",
-                    "xl": "0.5rem",
-                    "full": "0.75rem"
-                },
-                spacing: {
-                    "section-gap": "120px",
-                    "stack-md": "16px",
-                    "stack-sm": "8px",
-                    "gutter": "24px",
-                    "container-max": "1200px",
-                    "stack-xs": "4px",
-                    "margin-mobile": "20px",
-                    "stack-lg": "32px"
-                },
-                fontFamily: {
-                    "label-mono": ["JetBrains Mono"],
-                    "label-caps": ["Geist"],
-                    "body-lg": ["Geist"],
-                    "headline-lg": ["Geist"],
-                    "headline-lg-mobile": ["Geist"],
-                    "display-xl": ["Geist"],
-                    "body-md": ["Geist"],
-                    "headline-md": ["Geist"]
-                },
-                fontSize: {
-                    "label-mono": ["13px", {"lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "500"}],
-                    "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
-                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
-                    "headline-lg": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.03em", "fontWeight": "600"}],
-                    "headline-lg-mobile": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "600"}],
-                    "display-xl": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.04em", "fontWeight": "700"}],
-                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
-                    "headline-md": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "600"}]
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Shivani Nair | Backend Software Developer</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Geist:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "inverse-primary": "#0c56d0",
+                        "primary-fixed": "#dae2ff",
+                        "on-tertiary-fixed": "#380d00",
+                        "on-primary-fixed": "#001848",
+                        "on-secondary-fixed": "#00174a",
+                        "on-secondary-container": "#001d4d",
+                        "error-container": "#ffdad6",
+                        "tertiary-fixed-dim": "#ffb59b",
+                        "surface-container-low": "#f7f7f7",
+                        "secondary": "#415f91",
+                        "surface-container-highest": "#e1e2e1",
+                        "on-surface-variant": "#44474e",
+                        "tertiary-container": "#ffdbcf",
+                        "on-primary": "#ffffff",
+                        "surface-container-high": "#ebebeb",
+                        "error": "#ba1a1a",
+                        "on-tertiary-fixed-variant": "#812800",
+                        "secondary-fixed-dim": "#b3c5ff",
+                        "surface-variant": "#dee2ef",
+                        "inverse-surface": "#2f3033",
+                        "primary-container": "#d8e2ff",
+                        "on-tertiary-container": "#380d00",
+                        "on-surface": "#1a1c1e",
+                        "surface": "#fdfcff",
+                        "on-primary-container": "#001a41",
+                        "surface-container": "#f1f0f4",
+                        "primary-fixed-dim": "#b2c5ff",
+                        "tertiary-fixed": "#ffdbcf",
+                        "on-secondary-fixed-variant": "#003ea6",
+                        "surface-tint": "#0058cc",
+                        "on-error-container": "#410002",
+                        "primary": "#0058cc",
+                        "surface-dim": "#dedbe0",
+                        "on-primary-fixed-variant": "#0040a2",
+                        "background": "#fdfcff",
+                        "secondary-container": "#d6e3ff",
+                        "outline-variant": "#c4c6d0",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "surface-bright": "#fdfcff",
+                        "tertiary": "#904b33",
+                        "inverse-on-surface": "#f1f0f4",
+                        "on-tertiary": "#ffffff",
+                        "on-background": "#1a1c1e",
+                        "on-error": "#ffffff",
+                        "outline": "#74777f",
+                        "secondary-fixed": "#dbe1ff"
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    spacing: {
+                        "section-gap": "120px",
+                        "stack-md": "16px",
+                        "stack-sm": "8px",
+                        "gutter": "24px",
+                        "container-max": "1200px",
+                        "stack-xs": "4px",
+                        "margin-mobile": "20px",
+                        "stack-lg": "32px"
+                    },
+                    fontFamily: {
+                        "label-mono": ["JetBrains Mono"],
+                        "label-caps": ["Geist"],
+                        "body-lg": ["Geist"],
+                        "headline-lg": ["Geist"],
+                        "headline-lg-mobile": ["Geist"],
+                        "display-xl": ["Geist"],
+                        "body-md": ["Geist"],
+                        "headline-md": ["Geist"]
+                    },
+                    fontSize: {
+                        "label-mono": ["13px", { "lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "500" }],
+                        "label-caps": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "headline-lg": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.03em", "fontWeight": "600" }],
+                        "headline-lg-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+                        "display-xl": ["64px", { "lineHeight": "72px", "letterSpacing": "-0.04em", "fontWeight": "700" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "600" }]
+                    }
                 }
             }
         }
-    }
-</script>
-<style>
-    body { background-color: #fdfcff; color: #1a1c1e; }
-    .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
-    .surface-2-card { background-color: #ffffff; border: 1px solid #e1e2e1; transition: all 0.3s ease; box-shadow: 0 2px 4px rgba(0,0,0,0.02); }
-    .surface-2-card:hover { border-color: #0058cc; box-shadow: 0 8px 16px rgba(0,0,0,0.05); }
-    .tech-pill { background-color: #f1f0f4; border: 1px solid #e1e2e1; }
-</style>
+    </script>
+    <style>
+        body {
+            background-color: #fdfcff;
+            color: #1a1c1e;
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .surface-2-card {
+            background-color: #ffffff;
+            border: 1px solid #e1e2e1;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+        }
+
+        .surface-2-card:hover {
+            border-color: #0058cc;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05);
+        }
+
+        .tech-pill {
+            background-color: #f1f0f4;
+            border: 1px solid #e1e2e1;
+        }
+    </style>
 </head>
+
 <body class="font-body-md text-body-md selection:bg-primary-container selection:text-on-primary-container">
 
-<!-- TopNavBar -->
-<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant">
-    <div class="flex justify-between items-center h-16 px-gutter max-w-container-max mx-auto">
-        <div class="font-headline-md text-headline-md font-bold text-on-surface">Shivani Nair</div>
-        <div class="hidden md:flex gap-stack-lg items-center">
-            <a class="text-primary font-bold border-b-2 border-primary pb-1 font-label-caps text-label-caps" href="#home">Home</a>
-            <a class="text-on-surface-variant hover:text-primary transition-colors font-label-caps text-label-caps" href="#about">About</a>
-            <a class="text-on-surface-variant hover:text-primary transition-colors font-label-caps text-label-caps" href="#stack">Stack</a>
-            <a class="text-on-surface-variant hover:text-primary transition-colors font-label-caps text-label-caps" href="#experience">Experience</a>
-            <a class="text-on-surface-variant hover:text-primary transition-colors font-label-caps text-label-caps" href="projects.html">Projects</a>
+    <!-- TopNavBar -->
+    <nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant">
+        <div class="flex justify-between items-center h-16 px-gutter max-w-container-max mx-auto">
+            <div class="font-headline-md text-headline-md font-bold text-on-surface">Shivani Nair</div>
+            <div class="hidden md:flex gap-stack-lg items-center">
+                <a class="text-primary font-bold border-b-2 border-primary pb-1 font-label-caps text-label-caps"
+                    href="#home">Home</a>
+                <a class="text-on-surface-variant hover:text-primary transition-colors font-label-caps text-label-caps"
+                    href="#about">About</a>
+                <a class="text-on-surface-variant hover:text-primary transition-colors font-label-caps text-label-caps"
+                    href="#stack">Tech Stack</a>
+                <a class="text-on-surface-variant hover:text-primary transition-colors font-label-caps text-label-caps"
+                    href="#experience">Experience</a>
+                <a class="text-on-surface-variant hover:text-primary transition-colors font-label-caps text-label-caps"
+                    href="projects.html">Projects</a>
+            </div>
+            <div class="flex items-center gap-stack-md">
+                <!-- <button
+                    class="material-symbols-outlined text-on-surface-variant hover:text-primary transition-all">light_mode</button> -->
+                <button id="mobile-menu-btn" class="md:hidden material-symbols-outlined text-on-surface"
+                    aria-expanded="false" aria-controls="mobile-menu">menu</button>
+            </div>
         </div>
-        <div class="flex items-center gap-stack-md">
-            <button class="material-symbols-outlined text-on-surface-variant hover:text-primary transition-all">light_mode</button>
-            <button id="mobile-menu-btn" class="md:hidden material-symbols-outlined text-on-surface" aria-expanded="false" aria-controls="mobile-menu">menu</button>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu"
+            class="hidden md:hidden bg-surface/95 backdrop-blur-md border-t border-outline-variant px-gutter py-stack-md flex flex-col gap-stack-md">
+            <a class="font-label-caps text-label-caps text-primary font-bold py-2 border-b border-outline-variant"
+                href="#home">Home</a>
+            <a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors py-2 border-b border-outline-variant"
+                href="#about">About</a>
+            <a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors py-2 border-b border-outline-variant"
+                href="#stack">Stack</a>
+            <a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors py-2 border-b border-outline-variant"
+                href="#experience">Experience</a>
+            <a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors py-2"
+                href="projects.html">Projects</a>
         </div>
-    </div>
-    <!-- Mobile Menu -->
-    <div id="mobile-menu" class="hidden md:hidden bg-surface/95 backdrop-blur-md border-t border-outline-variant px-gutter py-stack-md flex flex-col gap-stack-md">
-        <a class="font-label-caps text-label-caps text-primary font-bold py-2 border-b border-outline-variant" href="#home">Home</a>
-        <a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors py-2 border-b border-outline-variant" href="#about">About</a>
-        <a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors py-2 border-b border-outline-variant" href="#stack">Stack</a>
-        <a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors py-2 border-b border-outline-variant" href="#experience">Experience</a>
-        <a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors py-2" href="projects.html">Projects</a>
-    </div>
-</nav>
+    </nav>
 
-<main class="pt-16">
+    <main class="pt-16">
 
-    <!-- Hero Section -->
-    <section class="min-h-[80vh] flex items-center py-section-gap px-gutter max-w-container-max mx-auto transition-all duration-700" id="home">
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-section-gap items-center w-full">
-            <div class="order-2 lg:order-1 space-y-stack-lg">
-                <div class="space-y-stack-md">
-                    <span class="font-label-mono text-label-mono text-primary tracking-widest uppercase font-semibold">Backend Software Developer</span>
-                    <h1 class="font-display-xl text-display-xl lg:text-[64px] text-on-surface leading-none">Shivani Nair</h1>
-                    <p class="font-body-lg text-body-lg text-on-surface-variant max-w-lg">
-                        Backend Developer building secure APIs, cloud-powered applications, and scalable business systems. Architecting robust infrastructures for the next generation of digital enterprise.
+        <!-- Hero Section -->
+        <section
+            class="min-h-[80vh] flex items-center py-section-gap px-gutter max-w-container-max mx-auto transition-all duration-700"
+            id="home">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-section-gap items-center w-full">
+                <div class="order-2 lg:order-1 space-y-stack-lg">
+                    <div class="space-y-stack-md">
+                        <span
+                            class="font-label-mono text-label-mono text-primary tracking-widest uppercase font-semibold">Backend
+                            Software Developer</span>
+                        <h1 class="font-display-xl text-display-xl lg:text-[64px] text-on-surface leading-none">Shivani
+                            Nair</h1>
+                        <p class="font-body-lg text-body-lg text-on-surface-variant max-w-lg">
+                            Backend Developer focused on building reliable APIs, backend services, and business
+                            applications. Experienced in creating systems that support real-world operations, streamline
+                            workflows, and scale with growing business needs.
+                        </p>
+                    </div>
+                    <div class="flex flex-wrap gap-stack-md pt-stack-md">
+                        <a href="projects.html"
+                            class="bg-primary text-on-primary px-stack-lg py-stack-md font-label-caps text-label-caps rounded-lg hover:shadow-lg transition-all">View
+                            Projects</a>
+                        <button
+                            class="border border-outline-variant text-on-surface px-stack-lg py-stack-md font-label-caps text-label-caps rounded-lg hover:border-primary hover:bg-surface-container transition-all">Download
+                            Resume</button>
+                    </div>
+                    <div class="grid grid-cols-2 sm:grid-cols-4 gap-stack-lg">
+                        <div>
+                            <p class="font-display-xl text-[32px] text-primary">2+</p>
+                            <p class="font-label-mono text-label-mono text-on-surface-variant uppercase">Years
+                                Experience</p>
+                        </div>
+                        <div>
+                            <p class="font-display-xl text-[32px] text-primary">6+</p>
+                            <p class="font-label-mono text-label-mono text-on-surface-variant uppercase">Products
+                                Delivered</p>
+                        </div>
+                        <div>
+                            <div class="flex items-center gap-1">
+                                <span class="material-symbols-outlined text-primary text-sm"
+                                    style="font-variation-settings: 'FILL' 1;">api</span>
+                                <p class="font-label-mono text-label-mono text-on-surface font-semibold uppercase pt-1">
+                                    NodeJS, PHP</p>
+                            </div>
+                            <p class="font-label-mono text-label-mono text-on-surface-variant uppercase">&nbsp;</p>
+                        </div>
+                        <div>
+                            <div class="flex items-center gap-1">
+                                <span class="material-symbols-outlined text-primary text-sm"
+                                    style="font-variation-settings: 'FILL' 1;">cloud</span>
+                                <p class="font-label-mono text-label-mono text-on-surface font-semibold uppercase pt-1">
+                                    Cloud</p>
+                            </div>
+                            <p class="font-label-mono text-label-mono text-on-surface-variant uppercase">&amp; DevOps
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="order-1 lg:order-2 hidden lg:flex justify-center">
+                    <div
+                        class="relative w-full aspect-square max-w-[500px] overflow-hidden rounded-xl border border-outline-variant shadow-xl">
+                        <img alt="Professional portrait of Shivani Nair" class="w-full h-full object-cover"
+                            src="images/Profile.png">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="py-section-gap bg-surface-container-lowest transition-all duration-700" id="about">
+            <div class="max-w-container-max mx-auto px-gutter">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-stack-lg">
+                    <div class="lg:col-span-4">
+                        <h2 class="font-headline-lg text-headline-lg text-on-surface">About Me</h2>
+                        <div class="w-16 h-1 bg-primary mt-stack-md"></div>
+                    </div>
+                    <div
+                        class="lg:col-span-8 space-y-stack-md font-body-lg text-body-lg text-on-surface leading-relaxed">
+                        <p>I'm a Backend Software Developer with experience building and maintaining applications used
+                            in day-to-day business operations. My work primarily involves developing APIs, designing
+                            backend modules, managing databases, and integrating third-party services such as payment
+                            gateways and cloud storage.</p>
+                        <p>Over the past two years, I've worked on products across different domains, including
+                            ticketing, healthcare, and transport management. These projects have given me hands-on
+                            exposure to solving practical challenges such as authentication, workflow automation, data
+                            management, and system reliability.</p>
+                        <p>I enjoy working on the engineering side of products—understanding requirements, breaking down
+                            complex processes, and building solutions that are straightforward, maintainable, and
+                            dependable. My focus is on writing clean code, making systems easier to manage, and
+                            delivering features that provide real value to the people using them.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tech Stack -->
+        <section class="py-section-gap max-w-container-max mx-auto px-gutter transition-all duration-700" id="stack">
+            <div class="text-center mb-16">
+                <h2 class="font-headline-lg text-headline-lg text-on-surface">Technical Expertise</h2>
+                <p class="text-on-surface-variant mt-stack-sm text-base">The technologies, tools, and platforms I use to
+                    build reliable backend systems and business applications.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-stack-lg">
+                <!-- Languages -->
+                <div class="surface-2-card p-stack-lg rounded-xl flex flex-col gap-stack-lg">
+                    <div class="flex items-center gap-stack-md">
+                        <span class="material-symbols-outlined text-primary">terminal</span>
+                        <h3 class="font-headline-md text-headline-md text-on-surface">Languages</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-stack-sm">
+                        <span
+                            class="tech-pill px-stack-md py-1 font-label-mono text-label-mono text-on-surface-variant rounded-full">PHP</span>
+                        <span
+                            class="tech-pill px-stack-md py-1 font-label-mono text-label-mono text-on-surface-variant rounded-full">JavaScript</span>
+                        <span
+                            class="tech-pill px-stack-md py-1 font-label-mono text-label-mono text-on-surface-variant rounded-full">Python</span>
+                    </div>
+                </div>
+                <!-- Backend -->
+                <div class="surface-2-card p-stack-lg rounded-xl flex flex-col gap-stack-lg">
+                    <div class="flex items-center gap-stack-md">
+                        <span class="material-symbols-outlined text-primary">settings_ethernet</span>
+                        <h3 class="font-headline-md text-headline-md text-on-surface">Backend</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-stack-sm">
+                        <span
+                            class="tech-pill px-stack-md py-1 font-label-mono text-label-mono text-on-surface-variant rounded-full">Node.js</span>
+                        <span
+                            class="tech-pill px-stack-md py-1 font-label-mono text-label-mono text-on-surface-variant rounded-full">Express.js</span>
+                        <span
+                            class="tech-pill px-stack-md py-1 font-label-mono text-label-mono text-on-surface-variant rounded-full">RESTful
+                            APIs</span>
+                        <span
+                            class="tech-pill px-stack-md py-1 font-label-mono text-label-mono text-on-surface-variant rounded-full">API
+                            Security</span>
+                        <span
+                            class="tech-pill px-stack-md py-1 font-label-mono text-label-mono text-on-surface-variant rounded-full">MVC
+                            Architecture</span>
+                        <span
+                            class="tech-pill px-stack-md py-1 font-label-mono text-label-mono text-on-surface-variant rounded-full">JWT
+                            Authentication</span>
+                    </div>
+                </div>
+                <!-- Databases -->
+                <div class="surface-2-card p-stack-lg rounded-xl flex flex-col gap-stack-lg">
+                    <div class="flex items-center gap-stack-md">
+                        <span class="material-symbols-outlined text-primary">database</span>
+                        <h3 class="font-headline-md text-headline-md text-on-surface">Databases</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-stack-sm">
+                        <span
+                            class="tech-pill px-stack-md py-1 font-label-mono text-label-mono text-on-surface-variant rounded-full">MySQL</span>
+                        <span
+                            class="tech-pill px-stack-md py-1 font-label-mono text-label-mono text-on-surface-variant rounded-full">PostgreSQL</span>
+                        <span
+                            class="tech-pill px-stack-md py-1 font-label-mono text-label-mono text-on-surface-variant rounded-full">MongoDB</span>
+                    </div>
+                </div>
+                <!-- Cloud & DevOps -->
+                <div class="surface-2-card p-stack-lg rounded-xl flex flex-col gap-stack-lg">
+                    <div class="flex items-center gap-stack-md">
+                        <span class="material-symbols-outlined text-primary">cloud_done</span>
+                        <h3 class="font-headline-md text-headline-md text-on-surface">Cloud &amp; DevOps</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-stack-sm">
+                        <span
+                            class="tech-pill px-stack-md py-1 font-label-mono text-label-mono text-on-surface-variant rounded-full">AWS
+                            S3</span>
+                        <span
+                            class="tech-pill px-stack-md py-1 font-label-mono text-label-mono text-on-surface-variant rounded-full">DigitalOcean
+                            Spaces</span>
+                        <span
+                            class="tech-pill px-stack-md py-1 font-label-mono text-label-mono text-on-surface-variant rounded-full">Docker</span>
+                        <span
+                            class="tech-pill px-stack-md py-1 font-label-mono text-label-mono text-on-surface-variant rounded-full">CI/CD</span>
+                        <span
+                            class="tech-pill px-stack-md py-1 font-label-mono text-label-mono text-on-surface-variant rounded-full">GitHub
+                            Actions</span>
+                    </div>
+                </div>
+                <!-- Tools -->
+                <div class="surface-2-card p-stack-lg rounded-xl flex flex-col gap-stack-lg">
+                    <div class="flex items-center gap-stack-md">
+                        <span class="material-symbols-outlined text-primary">construction</span>
+                        <h3 class="font-headline-md text-headline-md text-on-surface">Tools</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-stack-sm">
+                        <span
+                            class="tech-pill px-stack-md py-1 font-label-mono text-label-mono text-on-surface-variant rounded-full">Git</span>
+                        <span
+                            class="tech-pill px-stack-md py-1 font-label-mono text-label-mono text-on-surface-variant rounded-full">Postman</span>
+                        <span
+                            class="tech-pill px-stack-md py-1 font-label-mono text-label-mono text-on-surface-variant rounded-full">Google
+                            Apps Script</span>
+                        <span
+                            class="tech-pill px-stack-md py-1 font-label-mono text-label-mono text-on-surface-variant rounded-full">Cron
+                            Jobs</span>
+                        <span
+                            class="tech-pill px-stack-md py-1 font-label-mono text-label-mono text-on-surface-variant rounded-full">Payment
+                            Gateway Integration</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Timeline -->
+        <section class="py-section-gap bg-surface-container-lowest transition-all duration-700" id="experience">
+            <div class="max-w-[800px] mx-auto px-gutter">
+                <h2 class="font-headline-lg text-headline-lg text-on-surface text-center mb-16">Experience</h2>
+                <div class="relative border-l-2 border-outline-variant ml-4 md:ml-0">
+                    <!-- Current Role -->
+                    <div class="mb-16 relative pl-stack-lg">
+                        <div
+                            class="absolute -left-[10px] top-0 w-[18px] h-[18px] bg-primary rounded-full shadow-[0_0_12px_rgba(0,88,204,0.3)]">
+                        </div>
+                        <div class="space-y-stack-sm">
+                            <span class="font-label-mono text-label-mono text-primary font-bold uppercase">June 2023 -
+                                Present</span>
+                            <h3 class="font-headline-md text-headline-md text-on-surface">Backend Developer</h3>
+                            <p class="font-body-lg text-body-lg text-primary font-semibold">Team Inertia Technology</p>
+                            <p
+                                class="font-body-md text-body-md text-on-surface-variant max-w-2xl pt-stack-sm leading-relaxed">
+                                Developing and maintaining backend services for web and mobile applications,
+                                implementing secure APIs, integrating third-party services, and supporting production
+                                systems across multiple projects.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Intern Role -->
+                    <div class="relative pl-stack-lg">
+                        <div class="absolute -left-[9px] top-0 w-[16px] h-[16px] bg-outline-variant rounded-full"></div>
+                        <div class="space-y-stack-sm">
+                            <span class="font-label-mono text-label-mono text-on-surface-variant uppercase">Nov 2022 -
+                                May 2023</span>
+                            <h3 class="font-headline-md text-headline-md text-on-surface">Software Engineer Intern</h3>
+                            <p class="font-body-lg text-body-lg text-primary font-semibold">Reputes Business Solutions
+                            </p>
+                            <p
+                                class="font-body-md text-body-md text-on-surface-variant max-w-2xl pt-stack-sm leading-relaxed">
+                                Contributed to the design and implementation of internal tooling and database schema
+                                optimizations. Gained hands-on experience with agile methodologies and production-level
+                                code reviews.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education & Certifications -->
+        <section class="py-section-gap max-w-container-max mx-auto px-gutter transition-all duration-700">
+            <h2 class="font-headline-lg text-headline-lg text-on-surface mb-16">Education &amp; Excellence</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-stack-lg">
+                <div class="surface-2-card p-stack-lg rounded-xl">
+                    <span
+                        class="font-label-mono text-label-mono text-primary font-bold uppercase">Post-Graduation</span>
+                    <h3 class="font-headline-md text-headline-md text-on-surface mt-stack-sm">MCA</h3>
+                    <p class="font-body-md text-body-md text-on-surface-variant mt-2">Master of Computer Applications
                     </p>
+                    <p class="font-label-caps text-label-caps text-outline mt-4 font-semibold">University Specialization
+                        in Backend Systems</p>
                 </div>
-                <div class="flex flex-wrap gap-stack-md pt-stack-md">
-                    <a href="projects.html" class="bg-primary text-on-primary px-stack-lg py-stack-md font-label-caps text-label-caps rounded-lg hover:shadow-lg transition-all">View Projects</a>
-                    <button class="border border-outline-variant text-on-surface px-stack-lg py-stack-md font-label-caps text-label-caps rounded-lg hover:border-primary hover:bg-surface-container transition-all">Download Resume</button>
+                <div class="surface-2-card p-stack-lg rounded-xl">
+                    <span class="font-label-mono text-label-mono text-primary font-bold uppercase">Graduation</span>
+                    <h3 class="font-headline-md text-headline-md text-on-surface mt-stack-sm">BCA</h3>
+                    <p class="font-body-md text-body-md text-on-surface-variant mt-2">Bachelor of Computer Applications
+                    </p>
+                    <p class="font-label-caps text-label-caps text-outline mt-4 font-semibold">Foundation in Algorithms
+                        &amp; Data Structures</p>
                 </div>
-                <div class="grid grid-cols-2 sm:grid-cols-4 gap-stack-lg">
-                    <div>
-                        <p class="font-display-xl text-[32px] text-primary">2+</p>
-                        <p class="font-label-mono text-label-mono text-on-surface-variant uppercase">Years Experience</p>
+                <div class="surface-2-card p-stack-lg rounded-xl">
+                    <div class="flex justify-between items-start">
+                        <span
+                            class="font-label-mono text-label-mono text-primary font-bold uppercase">Achievement</span>
+                        <span class="material-symbols-outlined text-primary"
+                            style="font-variation-settings: 'FILL' 1;">workspace_premium</span>
                     </div>
-                    <div>
-                        <p class="font-display-xl text-[32px] text-primary">6+</p>
-                        <p class="font-label-mono text-label-mono text-on-surface-variant uppercase">Products Delivered</p>
-                    </div>
-                    <div>
-                        <div class="flex items-center gap-1">
-                            <span class="material-symbols-outlined text-primary text-sm" style="font-variation-settings: 'FILL' 1;">api</span>
-                            <p class="font-label-mono text-label-mono text-on-surface font-semibold uppercase pt-1">NodeJS, PHP</p>
-                        </div>
-                        <p class="font-label-mono text-label-mono text-on-surface-variant uppercase">&nbsp;</p>
-                    </div>
-                    <div>
-                        <div class="flex items-center gap-1">
-                            <span class="material-symbols-outlined text-primary text-sm" style="font-variation-settings: 'FILL' 1;">cloud</span>
-                            <p class="font-label-mono text-label-mono text-on-surface font-semibold uppercase pt-1">Cloud</p>
-                        </div>
-                        <p class="font-label-mono text-label-mono text-on-surface-variant uppercase">&amp; DevOps</p>
-                    </div>
+                    <h3 class="font-headline-md text-headline-md text-on-surface mt-stack-sm">PwC Launchpad</h3>
+                    <p class="font-body-md text-body-md text-on-surface-variant mt-2">Selection &amp; Program Excellence
+                    </p>
+                    <p class="font-label-caps text-label-caps text-outline mt-4 font-semibold">Corporate Readiness &amp;
+                        Advanced Engineering</p>
                 </div>
             </div>
-            <div class="order-1 lg:order-2 hidden lg:flex justify-center">
-                <div class="relative w-full aspect-square max-w-[500px] overflow-hidden rounded-xl border border-outline-variant shadow-xl">
-                    <img alt="Professional portrait of Shivani Nair" class="w-full h-full object-cover" src="images/Profile.png">
-                </div>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- About Section -->
-    <section class="py-section-gap bg-surface-container-lowest transition-all duration-700" id="about">
-        <div class="max-w-container-max mx-auto px-gutter">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-stack-lg">
-                <div class="lg:col-span-4">
-                    <h2 class="font-headline-lg text-headline-lg text-on-surface">Professional Story</h2>
-                    <div class="w-16 h-1 bg-primary mt-stack-md"></div>
-                </div>
-                <div class="lg:col-span-8 space-y-stack-md font-body-lg text-body-lg text-on-surface leading-relaxed">
-                    <p>I'm a Backend Software Developer with experience building and maintaining applications used in day-to-day business operations. My work primarily involves developing APIs, designing backend modules, managing databases, and integrating third-party services such as payment gateways and cloud storage.</p>
-                    <p>Over the past two years, I've worked on products across different domains, including ticketing, healthcare, and transport management. These projects have given me hands-on exposure to solving practical challenges such as authentication, workflow automation, data management, and system reliability.</p>
-                    <p>I enjoy working on the engineering side of products—understanding requirements, breaking down complex processes, and building solutions that are straightforward, maintainable, and dependable. My focus is on writing clean code, making systems easier to manage, and delivering features that provide real value to the people using them.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Tech Stack -->
-    <section class="py-section-gap max-w-container-max mx-auto px-gutter transition-all duration-700" id="stack">
-        <div class="text-center mb-16">
-            <h2 class="font-headline-lg text-headline-lg text-on-surface">Technical Arsenal</h2>
-            <p class="font-label-mono text-label-mono text-primary mt-stack-sm uppercase tracking-widest font-semibold">Built for Performance</p>
-        </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-stack-lg">
-            <!-- Languages -->
-            <div class="surface-2-card p-stack-lg rounded-xl flex flex-col gap-stack-lg">
-                <div class="flex items-center gap-stack-md">
-                    <span class="material-symbols-outlined text-primary">terminal</span>
-                    <h3 class="font-headline-md text-headline-md text-on-surface">Languages</h3>
-                </div>
-                <div class="flex flex-wrap gap-stack-sm">
-                    <span class="tech-pill px-stack-md py-1 font-label-mono text-label-mono text-on-surface-variant rounded-full">PHP</span>
-                    <span class="tech-pill px-stack-md py-1 font-label-mono text-label-mono text-on-surface-variant rounded-full">JavaScript</span>
-                    <span class="tech-pill px-stack-md py-1 font-label-mono text-label-mono text-on-surface-variant rounded-full">Python</span>
-                </div>
-            </div>
-            <!-- Backend -->
-            <div class="surface-2-card p-stack-lg rounded-xl flex flex-col gap-stack-lg">
-                <div class="flex items-center gap-stack-md">
-                    <span class="material-symbols-outlined text-primary">settings_ethernet</span>
-                    <h3 class="font-headline-md text-headline-md text-on-surface">Backend</h3>
-                </div>
-                <div class="flex flex-wrap gap-stack-sm">
-                    <span class="tech-pill px-stack-md py-1 font-label-mono text-label-mono text-on-surface-variant rounded-full">Node.js</span>
-                    <span class="tech-pill px-stack-md py-1 font-label-mono text-label-mono text-on-surface-variant rounded-full">Express.js</span>
-                    <span class="tech-pill px-stack-md py-1 font-label-mono text-label-mono text-on-surface-variant rounded-full">RESTful APIs</span>
-                    <span class="tech-pill px-stack-md py-1 font-label-mono text-label-mono text-on-surface-variant rounded-full">API Security</span>
-                    <span class="tech-pill px-stack-md py-1 font-label-mono text-label-mono text-on-surface-variant rounded-full">MVC Architecture</span>
-                    <span class="tech-pill px-stack-md py-1 font-label-mono text-label-mono text-on-surface-variant rounded-full">JWT Authentication</span>
-                </div>
-            </div>
-            <!-- Databases -->
-            <div class="surface-2-card p-stack-lg rounded-xl flex flex-col gap-stack-lg">
-                <div class="flex items-center gap-stack-md">
-                    <span class="material-symbols-outlined text-primary">database</span>
-                    <h3 class="font-headline-md text-headline-md text-on-surface">Databases</h3>
-                </div>
-                <div class="flex flex-wrap gap-stack-sm">
-                    <span class="tech-pill px-stack-md py-1 font-label-mono text-label-mono text-on-surface-variant rounded-full">MySQL</span>
-                    <span class="tech-pill px-stack-md py-1 font-label-mono text-label-mono text-on-surface-variant rounded-full">PostgreSQL</span>
-                    <span class="tech-pill px-stack-md py-1 font-label-mono text-label-mono text-on-surface-variant rounded-full">MongoDB</span>
-                </div>
-            </div>
-            <!-- Cloud & DevOps -->
-            <div class="surface-2-card p-stack-lg rounded-xl flex flex-col gap-stack-lg">
-                <div class="flex items-center gap-stack-md">
-                    <span class="material-symbols-outlined text-primary">cloud_done</span>
-                    <h3 class="font-headline-md text-headline-md text-on-surface">Cloud &amp; DevOps</h3>
-                </div>
-                <div class="flex flex-wrap gap-stack-sm">
-                    <span class="tech-pill px-stack-md py-1 font-label-mono text-label-mono text-on-surface-variant rounded-full">AWS S3</span>
-                    <span class="tech-pill px-stack-md py-1 font-label-mono text-label-mono text-on-surface-variant rounded-full">DigitalOcean Spaces</span>
-                    <span class="tech-pill px-stack-md py-1 font-label-mono text-label-mono text-on-surface-variant rounded-full">Docker</span>
-                    <span class="tech-pill px-stack-md py-1 font-label-mono text-label-mono text-on-surface-variant rounded-full">CI/CD</span>
-                    <span class="tech-pill px-stack-md py-1 font-label-mono text-label-mono text-on-surface-variant rounded-full">GitHub Actions</span>
-                </div>
-            </div>
-            <!-- Tools -->
-            <div class="surface-2-card p-stack-lg rounded-xl flex flex-col gap-stack-lg">
-                <div class="flex items-center gap-stack-md">
-                    <span class="material-symbols-outlined text-primary">construction</span>
-                    <h3 class="font-headline-md text-headline-md text-on-surface">Tools</h3>
-                </div>
-                <div class="flex flex-wrap gap-stack-sm">
-                    <span class="tech-pill px-stack-md py-1 font-label-mono text-label-mono text-on-surface-variant rounded-full">Git</span>
-                    <span class="tech-pill px-stack-md py-1 font-label-mono text-label-mono text-on-surface-variant rounded-full">Postman</span>
-                    <span class="tech-pill px-stack-md py-1 font-label-mono text-label-mono text-on-surface-variant rounded-full">Google Apps Script</span>
-                    <span class="tech-pill px-stack-md py-1 font-label-mono text-label-mono text-on-surface-variant rounded-full">Cron Jobs</span>
-                    <span class="tech-pill px-stack-md py-1 font-label-mono text-label-mono text-on-surface-variant rounded-full">Payment Gateway Integration</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Experience Timeline -->
-    <section class="py-section-gap bg-surface-container-lowest transition-all duration-700" id="experience">
-        <div class="max-w-[800px] mx-auto px-gutter">
-            <h2 class="font-headline-lg text-headline-lg text-on-surface text-center mb-16">Experience</h2>
-            <div class="relative border-l-2 border-outline-variant ml-4 md:ml-0">
-                <!-- Current Role -->
-                <div class="mb-16 relative pl-stack-lg">
-                    <div class="absolute -left-[10px] top-0 w-[18px] h-[18px] bg-primary rounded-full shadow-[0_0_12px_rgba(0,88,204,0.3)]"></div>
-                    <div class="space-y-stack-sm">
-                        <span class="font-label-mono text-label-mono text-primary font-bold uppercase">June 2023 - Present</span>
-                        <h3 class="font-headline-md text-headline-md text-on-surface">Backend Developer</h3>
-                        <p class="font-body-lg text-body-lg text-primary font-semibold">Team Inertia Technology</p>
-                        <p class="font-body-md text-body-md text-on-surface-variant max-w-2xl pt-stack-sm leading-relaxed">
-                            Leading development of scalable microservices, implementing high-concurrency API endpoints, and managing production cloud deployments. Focus on architectural integrity and zero-downtime migrations.
-                        </p>
-                    </div>
-                </div>
-                <!-- Intern Role -->
-                <div class="relative pl-stack-lg">
-                    <div class="absolute -left-[9px] top-0 w-[16px] h-[16px] bg-outline-variant rounded-full"></div>
-                    <div class="space-y-stack-sm">
-                        <span class="font-label-mono text-label-mono text-on-surface-variant uppercase">Nov 2022 - May 2023</span>
-                        <h3 class="font-headline-md text-headline-md text-on-surface">Software Engineer Intern</h3>
-                        <p class="font-body-lg text-body-lg text-primary font-semibold">Reputes Business Solutions</p>
-                        <p class="font-body-md text-body-md text-on-surface-variant max-w-2xl pt-stack-sm leading-relaxed">
-                            Contributed to the design and implementation of internal tooling and database schema optimizations. Gained hands-on experience with agile methodologies and production-level code reviews.
-                        </p>
+        <!-- Contact Section -->
+        <section class="py-section-gap bg-surface-container-low transition-all duration-700" id="contact">
+            <div class="max-w-container-max mx-auto px-gutter text-center">
+                <div class="max-w-2xl mx-auto space-y-stack-lg">
+                    <h2 class="font-headline-lg text-headline-lg text-on-surface">Let's Connect</h2>
+                    <p class="font-body-lg text-body-lg text-on-surface-variant">
+                        Whether you're hiring, collaborating on a project, or simply want to connect, I'd be happy to hear from you.
+                    </p>
+                    <div class="flex flex-col md:flex-row justify-center gap-stack-lg pt-stack-lg">
+                        <a class="surface-2-card p-stack-lg rounded-xl flex items-center gap-stack-md group w-full md:w-auto"
+                            href="mailto:shivani.nair1201@gmail.com">
+                            <span
+                                class="material-symbols-outlined text-primary group-hover:scale-110 transition-transform">mail</span>
+                            <span class="font-label-mono text-label-mono text-on-surface font-semibold">Email</span>
+                        </a>
+                        <a class="surface-2-card p-stack-lg rounded-xl flex items-center gap-stack-md group w-full md:w-auto"
+                            href="https://www.linkedin.com/in/shivaninair12/" target="_blank" rel="noopener noreferrer">
+                            <span
+                                class="material-symbols-outlined text-primary group-hover:scale-110 transition-transform">connect_without_contact</span>
+                            <span class="font-label-mono text-label-mono text-on-surface font-semibold">LinkedIn</span>
+                        </a>
+                        <a class="surface-2-card p-stack-lg rounded-xl flex items-center gap-stack-md group w-full md:w-auto"
+                            href="https://github.com" target="_blank" rel="noopener noreferrer">
+                            <span
+                                class="material-symbols-outlined text-primary group-hover:scale-110 transition-transform">code</span>
+                            <span class="font-label-mono text-label-mono text-on-surface font-semibold">GitHub</span>
+                        </a>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Education & Certifications -->
-    <section class="py-section-gap max-w-container-max mx-auto px-gutter transition-all duration-700">
-        <h2 class="font-headline-lg text-headline-lg text-on-surface mb-16">Education &amp; Excellence</h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-stack-lg">
-            <div class="surface-2-card p-stack-lg rounded-xl">
-                <span class="font-label-mono text-label-mono text-primary font-bold uppercase">Post-Graduation</span>
-                <h3 class="font-headline-md text-headline-md text-on-surface mt-stack-sm">MCA</h3>
-                <p class="font-body-md text-body-md text-on-surface-variant mt-2">Master of Computer Applications</p>
-                <p class="font-label-caps text-label-caps text-outline mt-4 font-semibold">University Specialization in Backend Systems</p>
-            </div>
-            <div class="surface-2-card p-stack-lg rounded-xl">
-                <span class="font-label-mono text-label-mono text-primary font-bold uppercase">Graduation</span>
-                <h3 class="font-headline-md text-headline-md text-on-surface mt-stack-sm">BCA</h3>
-                <p class="font-body-md text-body-md text-on-surface-variant mt-2">Bachelor of Computer Applications</p>
-                <p class="font-label-caps text-label-caps text-outline mt-4 font-semibold">Foundation in Algorithms &amp; Data Structures</p>
-            </div>
-            <div class="surface-2-card p-stack-lg rounded-xl">
-                <div class="flex justify-between items-start">
-                    <span class="font-label-mono text-label-mono text-primary font-bold uppercase">Achievement</span>
-                    <span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">workspace_premium</span>
-                </div>
-                <h3 class="font-headline-md text-headline-md text-on-surface mt-stack-sm">PwC Launchpad</h3>
-                <p class="font-body-md text-body-md text-on-surface-variant mt-2">Selection &amp; Program Excellence</p>
-                <p class="font-label-caps text-label-caps text-outline mt-4 font-semibold">Corporate Readiness &amp; Advanced Engineering</p>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-surface border-t border-outline-variant w-full py-stack-lg">
+        <div
+            class="flex flex-col md:flex-row justify-between items-center gap-stack-md max-w-container-max mx-auto px-gutter">
+            <div class="font-label-caps text-label-caps text-on-surface font-bold">SHIVANI NAIR</div>
+            <p class="font-body-md text-body-md text-on-surface-variant">© 2026 Shivani Nair. Designed & Developed by Shivani Nair.</p>
+            <div class="flex gap-stack-lg">
+                <a class="text-on-surface-variant hover:text-primary underline decoration-primary/30 hover:decoration-primary transition-all font-body-md text-body-md"
+                    href="https://github.com" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a class="text-on-surface-variant hover:text-primary underline decoration-primary/30 hover:decoration-primary transition-all font-body-md text-body-md"
+                    href="https://www.linkedin.com/in/shivaninair12/" target="_blank"
+                    rel="noopener noreferrer">LinkedIn</a>
+                <a class="text-on-surface-variant hover:text-primary underline decoration-primary/30 hover:decoration-primary transition-all font-body-md text-body-md"
+                    href="mailto:shivani.nair1201@gmail.com">Email</a>
             </div>
         </div>
-    </section>
+    </footer>
 
-    <!-- Contact Section -->
-    <section class="py-section-gap bg-surface-container-low transition-all duration-700" id="contact">
-        <div class="max-w-container-max mx-auto px-gutter text-center">
-            <div class="max-w-2xl mx-auto space-y-stack-lg">
-                <h2 class="font-headline-lg text-headline-lg text-on-surface">Initiate Collaboration</h2>
-                <p class="font-body-lg text-body-lg text-on-surface-variant">
-                    Ready to discuss architecture, backend strategy, or potential enterprise partnerships. My inbox is always open for technical inquiries.
-                </p>
-                <div class="flex flex-col md:flex-row justify-center gap-stack-lg pt-stack-lg">
-                    <a class="surface-2-card p-stack-lg rounded-xl flex items-center gap-stack-md group w-full md:w-auto" href="mailto:shivani.nair1201@gmail.com">
-                        <span class="material-symbols-outlined text-primary group-hover:scale-110 transition-transform">mail</span>
-                        <span class="font-label-mono text-label-mono text-on-surface font-semibold">Email</span>
-                    </a>
-                    <a class="surface-2-card p-stack-lg rounded-xl flex items-center gap-stack-md group w-full md:w-auto" href="https://www.linkedin.com/in/shivaninair12/" target="_blank" rel="noopener noreferrer">
-                        <span class="material-symbols-outlined text-primary group-hover:scale-110 transition-transform">connect_without_contact</span>
-                        <span class="font-label-mono text-label-mono text-on-surface font-semibold">LinkedIn</span>
-                    </a>
-                    <a class="surface-2-card p-stack-lg rounded-xl flex items-center gap-stack-md group w-full md:w-auto" href="https://github.com" target="_blank" rel="noopener noreferrer">
-                        <span class="material-symbols-outlined text-primary group-hover:scale-110 transition-transform">code</span>
-                        <span class="font-label-mono text-label-mono text-on-surface font-semibold">GitHub</span>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-</main>
-
-<!-- Footer -->
-<footer class="bg-surface border-t border-outline-variant w-full py-stack-lg">
-    <div class="flex flex-col md:flex-row justify-between items-center gap-stack-md max-w-container-max mx-auto px-gutter">
-        <div class="font-label-caps text-label-caps text-on-surface font-bold">SHIVANI NAIR</div>
-        <p class="font-body-md text-body-md text-on-surface-variant">© 2026 Shivani Nair. Built for performance.</p>
-        <div class="flex gap-stack-lg">
-            <a class="text-on-surface-variant hover:text-primary underline decoration-primary/30 hover:decoration-primary transition-all font-body-md text-body-md" href="https://github.com" target="_blank" rel="noopener noreferrer">GitHub</a>
-            <a class="text-on-surface-variant hover:text-primary underline decoration-primary/30 hover:decoration-primary transition-all font-body-md text-body-md" href="https://www.linkedin.com/in/shivaninair12/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-            <a class="text-on-surface-variant hover:text-primary underline decoration-primary/30 hover:decoration-primary transition-all font-body-md text-body-md" href="mailto:shivani.nair1201@gmail.com">Email</a>
-        </div>
-    </div>
-</footer>
-
-<script>
-    // Mobile menu toggle
-    const menuBtn = document.getElementById('mobile-menu-btn');
-    const mobileMenu = document.getElementById('mobile-menu');
-    menuBtn.addEventListener('click', () => {
-        const isOpen = !mobileMenu.classList.contains('hidden');
-        mobileMenu.classList.toggle('hidden', isOpen);
-        menuBtn.textContent = isOpen ? 'menu' : 'close';
-        menuBtn.setAttribute('aria-expanded', String(!isOpen));
-    });
-    // Close mobile menu when a link is clicked
-    mobileMenu.querySelectorAll('a').forEach(link => {
-        link.addEventListener('click', () => {
-            mobileMenu.classList.add('hidden');
-            menuBtn.textContent = 'menu';
-            menuBtn.setAttribute('aria-expanded', 'false');
+    <script>
+        // Mobile menu toggle
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuBtn.addEventListener('click', () => {
+            const isOpen = !mobileMenu.classList.contains('hidden');
+            mobileMenu.classList.toggle('hidden', isOpen);
+            menuBtn.textContent = isOpen ? 'menu' : 'close';
+            menuBtn.setAttribute('aria-expanded', String(!isOpen));
         });
-    });
-
-    // Smooth scroll for nav hash links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) target.scrollIntoView({ behavior: 'smooth' });
+        // Close mobile menu when a link is clicked
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                menuBtn.textContent = 'menu';
+                menuBtn.setAttribute('aria-expanded', 'false');
+            });
         });
-    });
 
-    // Scroll-spy: highlight active nav link
-    const sections = document.querySelectorAll('section[id]');
-    const navLinks = document.querySelectorAll('nav a[href^="#"]');
-    const updateNav = () => {
-        let current = '';
-        sections.forEach(s => { if (window.scrollY >= s.offsetTop - 80) current = s.id; });
-        navLinks.forEach(link => {
-            const isActive = link.getAttribute('href') === '#' + current;
-            link.classList.toggle('text-primary', isActive);
-            link.classList.toggle('font-bold', isActive);
-            link.classList.toggle('border-b-2', isActive);
-            link.classList.toggle('border-primary', isActive);
-            link.classList.toggle('pb-1', isActive);
-            link.classList.toggle('text-on-surface-variant', !isActive);
+        // Smooth scroll for nav hash links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) target.scrollIntoView({ behavior: 'smooth' });
+            });
         });
-    };
-    window.addEventListener('scroll', updateNav);
 
-    // Scroll-reveal animation
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('opacity-100', 'translate-y-0');
-                entry.target.classList.remove('opacity-0', 'translate-y-10');
-            }
+        // Scroll-spy: highlight active nav link
+        const sections = document.querySelectorAll('section[id]');
+        const navLinks = document.querySelectorAll('nav a[href^="#"]');
+        const updateNav = () => {
+            let current = '';
+            sections.forEach(s => { if (window.scrollY >= s.offsetTop - 80) current = s.id; });
+            navLinks.forEach(link => {
+                const isActive = link.getAttribute('href') === '#' + current;
+                link.classList.toggle('text-primary', isActive);
+                link.classList.toggle('font-bold', isActive);
+                link.classList.toggle('border-b-2', isActive);
+                link.classList.toggle('border-primary', isActive);
+                link.classList.toggle('pb-1', isActive);
+                link.classList.toggle('text-on-surface-variant', !isActive);
+            });
+        };
+        window.addEventListener('scroll', updateNav);
+
+        // Scroll-reveal animation
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('section').forEach(section => {
+            section.classList.add('opacity-0', 'translate-y-10');
+            observer.observe(section);
         });
-    }, { threshold: 0.1 });
-
-    document.querySelectorAll('section').forEach(section => {
-        section.classList.add('opacity-0', 'translate-y-10');
-        observer.observe(section);
-    });
-</script>
+    </script>
 </body>
+
 </html>
