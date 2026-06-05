@@ -1,257 +1,315 @@
 <!DOCTYPE html>
-<html class="scroll-smooth" lang="en">
-
+<html class="light" lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>Projects | Shivani Nair - Backend Developer</title>
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <script src="js/tailwind.config.js"></script>
-    <style>
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Projects | Shivani Nair</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Geist:wght@400;600;700&display=swap" rel="stylesheet">
+<script id="tailwind-config">
+    tailwind.config = {
+        darkMode: "class",
+        theme: {
+            extend: {
+                colors: {
+                    "primary": "#0c56d0",
+                    "on-primary": "#ffffff",
+                    "secondary": "#0040a2",
+                    "tertiary": "#a33500",
+                    "background": "#fcfcfc",
+                    "surface": "#ffffff",
+                    "on-surface": "#1a1c1e",
+                    "on-surface-variant": "#44474e",
+                    "outline": "#74777f",
+                    "outline-variant": "#c4c6d0",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-container-low": "#f7f9ff",
+                    "surface-container": "#f0f2f7",
+                    "surface-container-high": "#ebeef5",
+                    "surface-container-highest": "#e2e2e6"
+                },
+                borderRadius: {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+                },
+                spacing: {
+                    "section-gap": "120px",
+                    "stack-md": "16px",
+                    "stack-sm": "8px",
+                    "gutter": "24px",
+                    "container-max": "1200px",
+                    "stack-xs": "4px",
+                    "margin-mobile": "20px",
+                    "stack-lg": "32px"
+                },
+                fontFamily: {
+                    "label-mono": ["JetBrains Mono"],
+                    "label-caps": ["Geist"],
+                    "body-lg": ["Geist"],
+                    "headline-lg": ["Geist"],
+                    "headline-lg-mobile": ["Geist"],
+                    "display-xl": ["Geist"],
+                    "body-md": ["Geist"],
+                    "headline-md": ["Geist"]
+                },
+                fontSize: {
+                    "label-mono": ["13px", {"lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "500"}],
+                    "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "headline-lg": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.03em", "fontWeight": "600"}],
+                    "headline-lg-mobile": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                    "display-xl": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.04em", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "600"}]
+                }
+            }
         }
-        .tech-chip {
-            border-left-width: 2px;
-            border-left-color: #006875;
-            background-color: #F8FAFC;
-            padding: 4px 12px;
-            font-size: 14px;
-            line-height: 1.4;
-            letter-spacing: 0.05em;
-            font-weight: 500;
-            color: #434656;
-            font-family: 'JetBrains Mono', monospace;
-        }
-        .project-card {
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-        .project-card:hover {
-            border-color: #0041c8;
-            box-shadow: 0 10px 30px -15px rgba(0, 65, 200, 0.15);
-        }
-        .tech-grid-bg {
-            background-image:
-                linear-gradient(to right, #E2E8F0 1px, transparent 1px),
-                linear-gradient(to bottom, #E2E8F0 1px, transparent 1px);
-            background-size: 40px 40px;
-        }
-    </style>
+    }
+</script>
+<style>
+    body { background-color: #fcfcfc; color: #1a1c1e; -webkit-font-smoothing: antialiased; }
+    .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; vertical-align: middle; }
+    .project-card { transition: all 0.3s ease; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+    .project-card:hover { border-color: #0c56d0; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.1); }
+    .section-divider { width: 100%; height: 1px; background: linear-gradient(90deg, transparent, #c4c6d0, transparent); }
+</style>
 </head>
+<body class="overflow-x-hidden font-body-md">
 
-<body class="bg-surface text-on-surface font-body-md selection:bg-primary-fixed selection:text-on-primary-fixed">
-    <!-- Top Navigation Bar -->
-    <nav class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-gutter py-4 bg-surface/80 backdrop-blur-md border-b border-border-subtle">
-        <div class="text-headline-md font-headline-md font-bold text-on-surface">
-            <a href="index.html">Shivani Nair</a>
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-outline-variant">
+    <div class="flex justify-between items-center h-16 px-gutter max-w-container-max mx-auto">
+        <a href="index.html" class="font-headline-md text-headline-md font-bold text-on-surface">Shivani Nair</a>
+        <div class="hidden md:flex gap-stack-lg items-center">
+            <a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors" href="index.html#home">Home</a>
+            <a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors" href="index.html#about">About</a>
+            <a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors" href="index.html#stack">Stack</a>
+            <a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors" href="index.html#experience">Experience</a>
+            <a class="font-label-caps text-label-caps text-primary font-bold border-b-2 border-primary pb-1" href="projects.html">Projects</a>
         </div>
-        <div class="hidden md:flex gap-8 items-center">
-            <a class="text-on-surface-variant hover:text-primary transition-colors duration-200 font-label-md text-label-md" href="index.html">About</a>
-            <a class="text-on-surface-variant hover:text-primary transition-colors duration-200 font-label-md text-label-md" href="skills.html">Skills</a>
-            <a class="text-on-surface-variant hover:text-primary transition-colors duration-200 font-label-md text-label-md" href="experience.html">Experience</a>
-            <a class="text-primary border-b-2 border-primary pb-1 font-bold font-label-md text-label-md" href="projects.html">Projects</a>
-            <button id="open-contact-modal" class="bg-primary text-on-primary px-6 py-2 rounded-lg font-label-md text-label-md hover:opacity-80 transition-opacity">Contact Me</button>
+        <div class="flex items-center gap-stack-md">
+            <button class="material-symbols-outlined text-on-surface-variant hover:text-primary transition-all">light_mode</button>
+            <button class="md:hidden material-symbols-outlined text-on-surface">menu</button>
         </div>
-        <button class="md:hidden text-on-surface">
-            <span class="material-symbols-outlined">menu</span>
-        </button>
-    </nav>
+    </div>
+</nav>
 
-    <main class="pt-32 pb-section-padding">
-        <div class="max-w-container-max mx-auto px-gutter">
-            <!-- Header Section -->
-            <div class="relative mb-16 overflow-hidden tech-grid-bg -mx-gutter px-gutter py-14 rounded-xl">
-                <!-- Floating code decorations -->
-                <div class="absolute inset-0 opacity-30 pointer-events-none">
-                    <div class="absolute top-6 right-20 font-code-sm text-code-indigo transform -rotate-2">
-                        <pre>POST /api/v1/deploy { status: 201 }</pre>
+<main class="mt-32 mb-section-gap px-gutter max-w-container-max mx-auto">
+
+    <!-- Page Header -->
+    <header class="mb-stack-lg max-w-2xl">
+        <h1 class="font-display-xl text-display-xl text-on-surface mb-stack-sm">Featured Work</h1>
+        <p class="font-body-lg text-body-lg text-on-surface-variant">Showcasing projects involving API development, workflow automation, cloud integrations, and backend architecture for modern business applications.</p>
+    </header>
+
+    <div class="section-divider my-stack-lg opacity-60"></div>
+
+    <!-- Project Grid -->
+    <div class="flex flex-col gap-section-gap">
+
+        <!-- Project 1: Ticketing -->
+        <article class="project-card bg-surface border border-outline-variant rounded-xl p-stack-lg opacity-0 translate-y-8 transition-all duration-700">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-stack-lg">
+                <div class="lg:col-span-8">
+                    <div class="flex items-center justify-between mb-stack-md">
+                        <span class="font-label-caps text-label-caps bg-surface-container-high px-stack-sm py-stack-xs rounded border border-outline-variant text-primary uppercase">Project 01 / Infrastructure</span>
+                        <span class="font-label-mono text-label-mono bg-primary/10 text-primary px-3 py-1 rounded-full">Deployed</span>
                     </div>
-                    <div class="absolute bottom-6 left-8 font-code-sm text-code-indigo transform rotate-1">
-                        <pre>await loadBalancer.distribute(requests);</pre>
-                    </div>
-                    <div class="absolute top-1/2 right-8 font-code-sm text-code-indigo transform rotate-3 hidden md:block">
-                        <pre>projects_completed: 12</pre>
+                    <h2 class="font-headline-lg text-headline-lg mb-stack-md text-on-surface">Ticketing Management System</h2>
+                    <div class="space-y-stack-lg">
+                        <div>
+                            <h3 class="font-label-caps text-label-caps text-primary mb-stack-xs uppercase">Overview</h3>
+                            <p class="font-body-md text-body-md text-on-surface-variant">A high-throughput visitor management and digital ticketing engine designed for large-scale events. Focused on sub-second QR validation and distributed backend consistency.</p>
+                        </div>
+                        <div class="grid md:grid-cols-2 gap-stack-lg">
+                            <div>
+                                <h3 class="font-label-caps text-label-caps text-primary mb-stack-xs uppercase">Business Challenge</h3>
+                                <p class="font-body-md text-body-md text-on-surface-variant">Legacy systems suffered from 3-second latency during entry scans, leading to significant bottlenecks at physical gates.</p>
+                            </div>
+                            <div>
+                                <h3 class="font-label-caps text-label-caps text-primary mb-stack-xs uppercase">Solution</h3>
+                                <p class="font-body-md text-body-md text-on-surface-variant">Implemented a Redis-backed validation layer and an asynchronous event architecture to decouple frontends.</p>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="font-label-caps text-label-caps text-primary mb-stack-xs uppercase">Key Outcomes</h3>
+                            <ul class="grid md:grid-cols-2 gap-stack-xs list-none">
+                                <li class="flex items-start gap-2 font-body-md text-body-md text-on-surface">
+                                    <span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                                    <span>99.99% Uptime during peak events.</span>
+                                </li>
+                                <li class="flex items-start gap-2 font-body-md text-body-md text-on-surface">
+                                    <span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                                    <span>Latency reduced to &lt;200ms.</span>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-                <div class="relative z-10">
-                    <p class="text-secondary font-label-md text-label-md mb-4 uppercase tracking-widest">Portfolio</p>
-                    <h1 class="text-headline-xl font-headline-xl mb-6 max-w-2xl">Crafting robust backend architectures for complex ecosystems.</h1>
-                    <p class="text-body-lg font-body-lg text-on-surface-variant max-w-3xl">
-                        Detailed exploration of enterprise-grade systems, API architectures, and data-driven applications
-                        built with performance and scalability as core priorities.
-                    </p>
-                </div>
-            </div>
-
-            <!-- Projects Grid -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Project 1: Ticketing Management -->
-                <article class="project-card bg-surface-lowest border border-border-subtle p-card-padding flex flex-col h-full rounded-lg">
-                    <div class="aspect-video mb-6 bg-surface-container overflow-hidden rounded">
-                        <img class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500"
-                            alt="A clean, professional dashboard interface for a ticketing management system"
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDg5y4XtpWI7iI2pjSZxBrmeOjEQG8uuN4QdxTjsr7pwYecJSWuHlC7pP3V0NcaL0WGb9v77XV_Az_nkaclPIWkYfZE30kyX1oyMj_lmFxF7GfzOa1-1HAdDpBmkfVmlteWcrCTAHcA7FDqfsEA4iBFUWQN5Vt5oB6SXAiVhoe-QbfRMdhOBGQpqZlSI4n-rFM_ROWQr5pcMpyxD8P5O0bcyLOZWFgzgaIDlsyx2BFl9kNdVIoqPksGz5z_3e85AW800DP6aUt7_Fg4" />
+                <div class="lg:col-span-4 flex flex-col gap-stack-lg">
+                    <div class="h-64 bg-surface-container-high rounded-xl overflow-hidden border border-outline-variant">
+                        <img class="w-full h-full object-cover opacity-90 hover:opacity-100 transition-all duration-500" alt="Dashboard with real-time data visualizations" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC9jtrWUP9ig8aDQGW051rbFn_Fx_OeEbJ3lZRA8algAxA71RFBGc7FgWRBaSsUoIrUuLYeXQ33YfInyM8RU5-gIgIlwWUzMJH65WUDyYYcYw8HeC8GPGMfA5mUfhuFBL_psVEbsv-rIpsMJciEy2cHmMNWPUYuZqfCq2b4Pr2UVFNOfUGvhSt_OCzbZhjI6uncNCdA3Omm8NygwBMUmEv60i7u54WrcqeR2JPbaHJ04ufTnTBaANbPMbCIAM0hOKTAWn4bspcE5is">
                     </div>
-                    <div class="flex-grow">
-                        <h3 class="text-headline-md font-headline-md mb-3">Ticketing Management</h3>
-                        <p class="text-on-surface-variant text-body-md font-body-md mb-6 leading-relaxed">
-                            An automated internal support ecosystem designed to streamline cross-departmental issue
-                            tracking and resolution workflows with granular permission controls.
-                        </p>
-                        <div class="flex flex-wrap gap-2 mb-8">
-                            <span class="tech-chip">PHP</span>
-                            <span class="tech-chip">MySQL</span>
-                            <span class="tech-chip">REST API</span>
+                    <div>
+                        <h3 class="font-label-caps text-label-caps text-primary mb-stack-sm uppercase">Tech Stack</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-surface-container px-3 py-1 rounded-full font-label-mono text-label-mono text-on-surface-variant border border-outline-variant">Node.js</span>
+                            <span class="bg-surface-container px-3 py-1 rounded-full font-label-mono text-label-mono text-on-surface-variant border border-outline-variant">Redis</span>
+                            <span class="bg-surface-container px-3 py-1 rounded-full font-label-mono text-label-mono text-on-surface-variant border border-outline-variant">PostgreSQL</span>
+                            <span class="bg-surface-container px-3 py-1 rounded-full font-label-mono text-label-mono text-on-surface-variant border border-outline-variant">AWS Lambda</span>
                         </div>
-                    </div>
-                    <a class="inline-flex items-center gap-2 text-primary font-label-md text-label-md hover:underline group" href="#">
-                        View Case Study
-                        <span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
-                    </a>
-                </article>
-
-                <!-- Project 2: Wellness & Period Tracker -->
-                <article class="project-card bg-surface-lowest border border-border-subtle p-card-padding flex flex-col h-full rounded-lg">
-                    <div class="aspect-video mb-6 bg-surface-container overflow-hidden rounded">
-                        <img class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500"
-                            alt="A high-fidelity mockup of a mobile wellness application showing cycle calendar and health metrics"
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9YMitjUXjmeLuj_7UEfkPK_LXMh5PVqqVZiXeRzhdOYWnFcyiOPhiPmWGHdQQG-dXd8-e0fxhwqUCr4RWYlmBFF1_mP-MLYDe1rZIv52bNYX1PFD2uuT_BNYwYpcUMAmO82Jg5yH0Ubf3oJUpgp8wQ72scIVfpCZS2dXmdIjN3XjdHZxtIaPE21nwAb11stmtqliKYJ4MnQIc8g64h1Cx8QsgJp6R7OwQaDgx1KcpIW8dFOX70suQWe8TPNvm80-R3GBJu8sOvK2-" />
-                    </div>
-                    <div class="flex-grow">
-                        <h3 class="text-headline-md font-headline-md mb-3">Wellness &amp; Period Tracker</h3>
-                        <p class="text-on-surface-variant text-body-md font-body-md mb-6 leading-relaxed">
-                            A data-sensitive health application focusing on privacy-first data storage and predictive
-                            analytics for personalized wellness monitoring.
-                        </p>
-                        <div class="flex flex-wrap gap-2 mb-8">
-                            <span class="tech-chip">Node.js</span>
-                            <span class="tech-chip">MongoDB</span>
-                            <span class="tech-chip">JWT Auth</span>
-                        </div>
-                    </div>
-                    <a class="inline-flex items-center gap-2 text-primary font-label-md text-label-md hover:underline group" href="#">
-                        View Case Study
-                        <span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
-                    </a>
-                </article>
-
-                <!-- Project 3: Enterprise Transport System -->
-                <article class="project-card bg-surface-lowest border border-border-subtle p-card-padding flex flex-col h-full rounded-lg">
-                    <div class="aspect-video mb-6 bg-surface-container overflow-hidden rounded">
-                        <img class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500"
-                            alt="A minimalist architectural visualization of a logistics tracking map with transit routes"
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCvu6RMPYO0U1sW76aeQ5VDJyE0MH_dTb25HtonoZgON7QKJNgfrk10qTkUoD0gsmYwbiKkg6qPYUlsmlS1ubOUr08Lkob3a33jtf6ZNcusqiy0EQ5v0rxo4mdVXxSNwqp8FN3M5VsiYc482c7a1gLz5ZLhUgQd9IT4gSzs1GTy6fbmdftfzh0L8L3MKufrWpMpHGikoHxgc-U0VZWWXjSfNn74qtLKPzmyHaFlE7i9WoYewaFbGcyM5UvA6kDLJ2b8l89-_qnG0oT0" />
-                    </div>
-                    <div class="flex-grow">
-                        <h3 class="text-headline-md font-headline-md mb-3">Enterprise Transport System</h3>
-                        <p class="text-on-surface-variant text-body-md font-body-md mb-6 leading-relaxed">
-                            A high-availability logistics platform for real-time fleet management, route optimization,
-                            and multi-tenant resource allocation.
-                        </p>
-                        <div class="flex flex-wrap gap-2 mb-8">
-                            <span class="tech-chip">Python</span>
-                            <span class="tech-chip">PostgreSQL</span>
-                            <span class="tech-chip">Docker</span>
-                        </div>
-                    </div>
-                    <a class="inline-flex items-center gap-2 text-primary font-label-md text-label-md hover:underline group" href="#">
-                        View Case Study
-                        <span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
-                    </a>
-                </article>
-            </div>
-
-            <!-- Tech Stack Footer / Code Snippet Section -->
-            <div class="mt-24 p-8 bg-inverse-surface rounded-lg">
-                <div class="flex flex-col md:flex-row gap-8 items-center">
-                    <div class="md:w-1/2">
-                        <h2 class="text-headline-lg font-headline-lg text-inverse-on-surface mb-4">The Backend Philosophy</h2>
-                        <p class="text-surface-variant text-body-md font-body-md mb-6">
-                            "Clean code is not just about what the machine reads, but how a human understands the logic
-                            behind the architecture. I prioritize modularity and test-driven development in every project."
-                        </p>
-                        <div class="flex items-center gap-4">
-                            <span class="material-symbols-outlined text-status-cyan">terminal</span>
-                            <span class="text-label-md font-label-md text-status-cyan">Full-Stack Competency with Backend Focus</span>
-                        </div>
-                    </div>
-                    <div class="md:w-1/2 w-full">
-                        <pre class="bg-on-surface rounded p-6 text-code-sm font-code-sm text-status-cyan overflow-x-auto border border-outline"><code>{
-  "profile": "Shivani Nair",
-  "specialization": "Backend Engineering",
-  "stack": ["PHP", "Node.js", "MySQL", "Postgres"],
-  "projects_completed": 12,
-  "status": "Available for Collaboration"
-}</code></pre>
                     </div>
                 </div>
             </div>
-        </div>
-    </main>
+        </article>
 
-    <!-- CTA -->
-    <section class="max-w-container-max mx-auto px-gutter py-section-padding text-center">
-        <div class="bg-inverse-surface text-inverse-on-surface p-12 rounded-3xl relative overflow-hidden">
-            <div class="absolute inset-0 bg-primary/10 opacity-30"></div>
-            <div class="relative z-10">
-                <h2 class="font-headline-lg text-headline-lg mb-6">Looking for a Backend Developer?</h2>
-                <p class="text-body-lg text-surface-variant mb-8 max-w-xl mx-auto">2+ years of experience building scalable APIs, automation systems, payment integrations, and cloud-powered applications using Node.js, PHP, MySQL, and AWS.</p>
-                <div class="flex flex-col sm:flex-row justify-center gap-4">
-                    <a href="projects.html" class="bg-primary text-on-primary px-10 py-4 rounded-xl font-label-md text-label-md hover:scale-105 transition-transform shadow-lg shadow-primary/20 inline-block">VIEW PROJECTS</a>
-                    <button data-contact-trigger class="border border-surface-variant text-surface-variant px-10 py-4 rounded-xl font-label-md text-label-md hover:bg-surface-variant/10 transition-colors">GET IN TOUCH</button>
+        <!-- Project 2: Wellness -->
+        <article class="project-card bg-surface border border-outline-variant rounded-xl p-stack-lg opacity-0 translate-y-8 transition-all duration-700">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-stack-lg">
+                <div class="lg:col-span-8">
+                    <div class="flex items-center justify-between mb-stack-md">
+                        <span class="font-label-caps text-label-caps bg-surface-container-high px-stack-sm py-stack-xs rounded border border-outline-variant text-tertiary uppercase">Project 02 / Health-Tech</span>
+                        <span class="font-label-mono text-label-mono bg-tertiary/10 text-tertiary px-3 py-1 rounded-full">Scaling</span>
+                    </div>
+                    <h2 class="font-headline-lg text-headline-lg mb-stack-md text-on-surface">Wellness &amp; Period Tracking Platform</h2>
+                    <div class="space-y-stack-lg">
+                        <div>
+                            <h3 class="font-label-caps text-label-caps text-tertiary mb-stack-xs uppercase">Overview</h3>
+                            <p class="font-body-md text-body-md text-on-surface-variant">A privacy-first health tracking engine designed for longitudinal data analysis and personalized wellness insights.</p>
+                        </div>
+                        <div class="grid md:grid-cols-2 gap-stack-lg">
+                            <div>
+                                <h3 class="font-label-caps text-label-caps text-tertiary mb-stack-xs uppercase">Business Challenge</h3>
+                                <p class="font-body-md text-body-md text-on-surface-variant">Handling highly sensitive medical data requires strict encryption standards and GDPR compliance.</p>
+                            </div>
+                            <div>
+                                <h3 class="font-label-caps text-label-caps text-tertiary mb-stack-xs uppercase">Solution</h3>
+                                <p class="font-body-md text-body-md text-on-surface-variant">Developed an end-to-end encrypted microservices architecture with zero-knowledge data storage.</p>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="font-label-caps text-label-caps text-tertiary mb-stack-xs uppercase">Key Outcomes</h3>
+                            <ul class="grid md:grid-cols-2 gap-stack-xs list-none">
+                                <li class="flex items-start gap-2 font-body-md text-body-md text-on-surface">
+                                    <span class="material-symbols-outlined text-tertiary" style="font-variation-settings: 'FILL' 1;">security</span>
+                                    <span>HIPAA &amp; GDPR Compliant architecture.</span>
+                                </li>
+                                <li class="flex items-start gap-2 font-body-md text-body-md text-on-surface">
+                                    <span class="material-symbols-outlined text-tertiary" style="font-variation-settings: 'FILL' 1;">query_stats</span>
+                                    <span>40% increase in user retention.</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:col-span-4 flex flex-col gap-stack-lg">
+                    <div class="h-64 bg-surface-container-high rounded-xl overflow-hidden border border-outline-variant">
+                        <img class="w-full h-full object-cover opacity-90 hover:opacity-100 transition-all duration-500" alt="Health data visualization interface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCL-W1kFX9O0CyT0tiECmcKDrFwjRciwl8Itco1EixJGtiGigp5UJMLMwAteNGunsXxOXiPt996AMNRS0p78fFOIAW6svayNSgPrhcKKwAmsk2EvmAe9i-ztXORWJ1vY_6_hOk_baaskgg30_aC9NkTytBrEQZSboVTFTlkTKq5q7dtxcqXF-DeN8KhEWh8pYHHBDLi1rKHcUR-3mfgOXiYFAdPjoXk7xqViwb1Qx25_pJ2aFYfJeWHaWILZTdkV-5gtegHdtWUXgo">
+                    </div>
+                    <div>
+                        <h3 class="font-label-caps text-label-caps text-tertiary mb-stack-sm uppercase">Tech Stack</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-surface-container px-3 py-1 rounded-full font-label-mono text-label-mono text-on-surface-variant border border-outline-variant">Python / Django</span>
+                            <span class="bg-surface-container px-3 py-1 rounded-full font-label-mono text-label-mono text-on-surface-variant border border-outline-variant">MongoDB</span>
+                            <span class="bg-surface-container px-3 py-1 rounded-full font-label-mono text-label-mono text-on-surface-variant border border-outline-variant">Keycloak</span>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </article>
 
-    <!-- Footer -->
-    <footer class="w-full border-t border-border-subtle bg-surface">
-        <div class="max-w-container-max mx-auto px-gutter py-12 flex flex-col md:flex-row justify-between items-center gap-6">
-            <div class="flex flex-col items-center md:items-start gap-1">
-                <span class="font-headline-md text-headline-md font-bold text-on-surface">Shivani Nair</span>
-                <p class="text-body-md text-on-surface-variant">© 2026 · Backend Developer · Goa, India</p>
+        <!-- Project 3: Transport -->
+        <article class="project-card bg-surface border border-outline-variant rounded-xl p-stack-lg opacity-0 translate-y-8 transition-all duration-700">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-stack-lg">
+                <div class="lg:col-span-8">
+                    <div class="flex items-center justify-between mb-stack-md">
+                        <span class="font-label-caps text-label-caps bg-surface-container-high px-stack-sm py-stack-xs rounded border border-outline-variant text-secondary uppercase">Project 03 / Operations</span>
+                        <span class="font-label-mono text-label-mono bg-secondary/10 text-secondary px-3 py-1 rounded-full">Enterprise</span>
+                    </div>
+                    <h2 class="font-headline-lg text-headline-lg mb-stack-md text-on-surface">Enterprise Transport Management System</h2>
+                    <div class="space-y-stack-lg">
+                        <div>
+                            <h3 class="font-label-caps text-label-caps text-secondary mb-stack-xs uppercase">Overview</h3>
+                            <p class="font-body-md text-body-md text-on-surface-variant">A comprehensive fleet management suite for logistics providers. Includes real-time route optimization and automated dispatching.</p>
+                        </div>
+                        <div class="grid md:grid-cols-2 gap-stack-lg">
+                            <div>
+                                <h3 class="font-label-caps text-label-caps text-secondary mb-stack-xs uppercase">Business Challenge</h3>
+                                <p class="font-body-md text-body-md text-on-surface-variant">Manual route allocation resulted in a 15% fuel waste and frequent scheduling conflicts.</p>
+                            </div>
+                            <div>
+                                <h3 class="font-label-caps text-label-caps text-secondary mb-stack-xs uppercase">Solution</h3>
+                                <p class="font-body-md text-body-md text-on-surface-variant">Engineered a custom heuristic route-planning algorithm and MQTT real-time tracking gateway.</p>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="font-label-caps text-label-caps text-secondary mb-stack-xs uppercase">Key Outcomes</h3>
+                            <ul class="grid md:grid-cols-2 gap-stack-xs list-none">
+                                <li class="flex items-start gap-2 font-body-md text-body-md text-on-surface">
+                                    <span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">route</span>
+                                    <span>22% Reduction in fuel consumption.</span>
+                                </li>
+                                <li class="flex items-start gap-2 font-body-md text-body-md text-on-surface">
+                                    <span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">precision_manufacturing</span>
+                                    <span>100% Automated operational scheduling.</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:col-span-4 flex flex-col gap-stack-lg">
+                    <div class="h-64 bg-surface-container-high rounded-xl overflow-hidden border border-outline-variant">
+                        <img class="w-full h-full object-cover opacity-90 hover:opacity-100 transition-all duration-500" alt="Futuristic map interface with interconnected route lines" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB84qH-hREV1QZi_GWtT__3Ri5DBosZaFzZrsxA3ZHV4UjxRoXq4WEgUSr-sgkcChW38dzOLcG46elqzXSc-9HIaWM6PzBYIh6zf3vo1A3am2hquipkJOG2penly9zCl7_sshOTgo9l7Q9vFPbD4bhCUu0yqtEUbgCwxVjYbTVlT1GmsdilKLcLJCeIMzsFgIlGALcgAivHfGzeR2GlICqup1TMmuJFxtD9D4m-G4vIi3tbAdPtQjkK1AHUrFf7EHNl3vuSyOmmz7k">
+                    </div>
+                    <div>
+                        <h3 class="font-label-caps text-label-caps text-secondary mb-stack-sm uppercase">Tech Stack</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-surface-container px-3 py-1 rounded-full font-label-mono text-label-mono text-on-surface-variant border border-outline-variant">Go (Golang)</span>
+                            <span class="bg-surface-container px-3 py-1 rounded-full font-label-mono text-label-mono text-on-surface-variant border border-outline-variant">RabbitMQ</span>
+                            <span class="bg-surface-container px-3 py-1 rounded-full font-label-mono text-label-mono text-on-surface-variant border border-outline-variant">Elasticsearch</span>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <nav class="flex gap-8 items-center">
-                <a class="text-on-surface-variant hover:text-primary transition-colors duration-200 font-label-md text-label-md" href="index.html">About</a>
-                <a class="text-on-surface-variant hover:text-primary transition-colors duration-200 font-label-md text-label-md" href="skills.html">Skills</a>
-                <a class="text-on-surface-variant hover:text-primary transition-colors duration-200 font-label-md text-label-md" href="experience.html">Experience</a>
-                <a class="text-on-surface-variant hover:text-primary transition-colors duration-200 font-label-md text-label-md" href="projects.html">Projects</a>
-            </nav>
-            <div class="flex gap-6 items-center">
-                <a class="text-on-surface-variant hover:text-primary transition-colors duration-200 font-label-md text-label-md flex items-center gap-1" href="https://www.linkedin.com/in/shivaninair12/">
-                    <span class="material-symbols-outlined text-[18px]">link</span>LinkedIn
-                </a>
-                <a class="text-on-surface-variant hover:text-primary transition-colors duration-200 font-label-md text-label-md flex items-center gap-1" href="mailto:shivani.nair1201@gmail.com" >
-                    <span class="material-symbols-outlined text-[18px]">mail</span>Email
-                </a>
-            </div>
-        </div>
-    </footer>
+        </article>
 
-    <script>
-        // Parallax grid background
-        document.addEventListener('mousemove', (e) => {
-            const techBg = document.querySelector('.tech-grid-bg');
-            if (techBg) {
-                const moveX = (e.clientX / window.innerWidth) * 10;
-                const moveY = (e.clientY / window.innerHeight) * 10;
-                techBg.style.backgroundPosition = `${moveX}px ${moveY}px`;
+    </div>
+</main>
+
+<!-- Footer -->
+<footer class="w-full py-stack-lg border-t border-outline-variant bg-surface mt-section-gap">
+    <div class="flex flex-col md:flex-row justify-between items-center gap-stack-md max-w-container-max mx-auto px-gutter">
+        <div class="font-label-caps text-label-caps text-on-surface font-bold">SHIVANI NAIR</div>
+        <p class="font-body-md text-body-md text-on-surface-variant">© 2026 Shivani Nair. Built for performance.</p>
+        <div class="flex gap-stack-lg">
+            <a class="font-body-md text-body-md text-on-surface-variant hover:text-primary underline transition-all" href="https://github.com" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a class="font-body-md text-body-md text-on-surface-variant hover:text-primary underline transition-all" href="https://www.linkedin.com/in/shivaninair12/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a class="font-body-md text-body-md text-on-surface-variant hover:text-primary underline transition-all" href="mailto:shivani.nair1201@gmail.com">Email</a>
+        </div>
+    </div>
+</footer>
+
+<script>
+    // Hover lift on project cards
+    document.querySelectorAll('.project-card').forEach(card => {
+        card.addEventListener('mouseenter', () => card.style.transform = 'translateY(-4px)');
+        card.addEventListener('mouseleave', () => card.style.transform = 'translateY(0px)');
+    });
+
+    // Scroll-reveal for project cards
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('opacity-100', 'translate-y-0');
+                entry.target.classList.remove('opacity-0', 'translate-y-8');
             }
         });
+    }, { threshold: 0.1 });
 
-        // Micro-interaction for project cards
-        document.querySelectorAll('.project-card').forEach(card => {
-            const img = card.querySelector('img');
-            if (!img) return;
-            card.addEventListener('mouseenter', () => img.style.transform = 'scale(1.05)');
-            card.addEventListener('mouseleave', () => img.style.transform = 'scale(1)');
-        });
-    </script>
-    <script src="js/contact-modal.js"></script>
+    document.querySelectorAll('.project-card').forEach(card => observer.observe(card));
+</script>
 </body>
-
 </html>
