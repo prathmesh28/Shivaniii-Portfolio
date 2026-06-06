@@ -155,193 +155,480 @@
 
         <div class="section-divider my-stack-lg opacity-60"></div>
 
+        <!-- Technical Highlights -->
+        <section class="mb-16">
+            <div class="bg-surface-container-low border border-outline-variant rounded-xl p-6 md:p-8">
+                <div class="flex items-center gap-3 mb-6">
+                    <span class="material-symbols-outlined text-primary text-3xl font-semibold">analytics</span>
+                    <h2 class="font-headline-md text-headline-md text-on-surface">Technical Highlights</h2>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <!-- Column 1: Core Backend & API Development -->
+                    <div class="bg-surface p-6 rounded-xl border border-outline-variant hover:border-primary/40 transition-all duration-300">
+                        <div class="w-10 h-10 rounded-lg bg-primary/10 text-primary flex items-center justify-center mb-4">
+                            <span class="material-symbols-outlined text-xl">developer_board</span>
+                        </div>
+                        <h3 class="font-headline-md text-lg font-bold text-on-surface mb-3">Core Backend &amp; APIs</h3>
+                        <ul class="space-y-2.5 text-sm text-on-surface-variant">
+                            <li class="flex items-start gap-2">
+                                <span class="w-1.5 h-1.5 rounded-full bg-primary mt-1.5 flex-shrink-0"></span>
+                                <span>Backend Development with PHP, Node.js, and MySQL</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="w-1.5 h-1.5 rounded-full bg-primary mt-1.5 flex-shrink-0"></span>
+                                <span>RESTful API Development &amp; Frontend Integration</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="w-1.5 h-1.5 rounded-full bg-primary mt-1.5 flex-shrink-0"></span>
+                                <span>Workflow Automation &amp; Business Logic</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Column 2: Security & Databases -->
+                    <div class="bg-surface p-6 rounded-xl border border-outline-variant hover:border-primary/40 transition-all duration-300">
+                        <div class="w-10 h-10 rounded-lg bg-tertiary/10 text-tertiary flex items-center justify-center mb-4">
+                            <span class="material-symbols-outlined text-xl">database</span>
+                        </div>
+                        <h3 class="font-headline-md text-lg font-bold text-on-surface mb-3">Security &amp; Databases</h3>
+                        <ul class="space-y-2.5 text-sm text-on-surface-variant">
+                            <li class="flex items-start gap-2">
+                                <span class="w-1.5 h-1.5 rounded-full bg-tertiary mt-1.5 flex-shrink-0"></span>
+                                <span>JWT Authentication &amp; Authorization</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="w-1.5 h-1.5 rounded-full bg-tertiary mt-1.5 flex-shrink-0"></span>
+                                <span>Database Design &amp; Query Optimization</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="w-1.5 h-1.5 rounded-full bg-tertiary mt-1.5 flex-shrink-0"></span>
+                                <span>Git &amp; GitHub Version Control</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Column 3: Workflows & Integrations -->
+                    <div class="bg-surface p-6 rounded-xl border border-outline-variant hover:border-primary/40 transition-all duration-300">
+                        <div class="w-10 h-10 rounded-lg bg-secondary/10 text-secondary flex items-center justify-center mb-4">
+                            <span class="material-symbols-outlined text-xl">hub</span>
+                        </div>
+                        <h3 class="font-headline-md text-lg font-bold text-on-surface mb-3">Integrations &amp; Workflows</h3>
+                        <ul class="space-y-2.5 text-sm text-on-surface-variant">
+                            <li class="flex items-start gap-2">
+                                <span class="w-1.5 h-1.5 rounded-full bg-secondary mt-1.5 flex-shrink-0"></span>
+                                <span>CRM &amp; Admin Dashboard Development</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="w-1.5 h-1.5 rounded-full bg-secondary mt-1.5 flex-shrink-0"></span>
+                                <span>AJAX, jQuery &amp; Email Notifications</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="w-1.5 h-1.5 rounded-full bg-secondary mt-1.5 flex-shrink-0"></span>
+                                <span>Google Calendar Integration</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Filter -->
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8">
+            <h2 class="font-headline-lg text-[28px] font-bold text-on-surface">Professional Projects</h2>
+            <div class="flex flex-wrap gap-2">
+                <button data-filter="all" class="px-4 py-1.5 rounded-full font-label-caps text-label-caps bg-primary text-on-primary hover:shadow transition-all duration-200">
+                    All
+                </button>
+                <button data-filter="php" class="px-4 py-1.5 rounded-full font-label-caps text-label-caps bg-surface-container text-on-surface-variant hover:bg-surface-container-high transition-all duration-200">
+                    PHP &amp; MySQL
+                </button>
+                <button data-filter="node" class="px-4 py-1.5 rounded-full font-label-caps text-label-caps bg-surface-container text-on-surface-variant hover:bg-surface-container-high transition-all duration-200">
+                    Node.js
+                </button>
+            </div>
+        </div>
+
         <!-- Project Grid -->
-        <div class="flex flex-col gap-section-gap">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
 
-            <!-- Project 1: Ticketing -->
-            <article
-                class="project-card bg-surface border border-outline-variant rounded-xl p-stack-lg opacity-0 translate-y-8 transition-all duration-700">
-                <div class="grid grid-cols-1 lg:grid-cols-12 gap-stack-lg">
-                    <div class="lg:col-span-8">
-                        <!-- <div class="flex items-center justify-between mb-stack-md">
-                            <span
-                                class="font-label-caps text-label-caps bg-surface-container-high px-stack-sm py-stack-xs rounded border border-outline-variant text-primary uppercase">Project
-                                01 / Infrastructure</span>
-                            <span
-                                class="font-label-mono text-label-mono bg-primary/10 text-primary px-3 py-1 rounded-full">Deployed</span>
-                        </div> -->
-                        <h2 class="font-headline-lg text-headline-lg mb-stack-md text-on-surface">Ticketing Management
-                            System</h2>
-                        <div class="space-y-stack-lg">
-                            <div>
-
-                                <p class="font-body-md text-body-md text-on-surface-variant">
-                                    Built backend modules for visitor and ticket management workflows used to streamline
-                                    event operations and entry management.
-                                </p>
-                            </div>
-                            <div>
-                                <h3 class="font-label-caps text-label-caps text-primary mb-stack-xs uppercase">Overview
-                                </h3>
-                                <p class="font-body-md text-body-md text-on-surface-variant">
-                                    Developed APIs for ticket creation, visitor registration, group bookings, and entry
-                                    validation. The system was designed to simplify ticket handling while supporting
-                                    efficient event management processes.
-                                </p>
-                            </div>
-                            <div class=" gap-stack-lg">
-                                <div>
-                                    <h3 class="font-label-caps text-label-caps text-primary mb-stack-xs uppercase">
-                                        Key Contributions
-                                    </h3>
-                                    <p class="font-body-md text-body-md text-on-surface-variant">
-                                        • Developed backend APIs for ticket and visitor management<br>
-                                        • Implemented group-based ticket creation workflows<br>
-                                        • Built scan and check-in functionality for ticket validation<br>
-                                        • Improved operational efficiency through centralized management<br>
-                                    </p>
-                                </div>
-
-                            </div>
-
-                        </div>
-                    </div>
-                    <div class="lg:col-span-4 flex flex-col gap-stack-lg">
-                        <div
-                            class="h-64 bg-surface-container-high rounded-xl overflow-hidden border border-outline-variant">
-                            <img class="w-full h-full object-cover opacity-90 hover:opacity-100 transition-all duration-500"
-                                alt="Dashboard with real-time data visualizations"
-                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuC9jtrWUP9ig8aDQGW051rbFn_Fx_OeEbJ3lZRA8algAxA71RFBGc7FgWRBaSsUoIrUuLYeXQ33YfInyM8RU5-gIgIlwWUzMJH65WUDyYYcYw8HeC8GPGMfA5mUfhuFBL_psVEbsv-rIpsMJciEy2cHmMNWPUYuZqfCq2b4Pr2UVFNOfUGvhSt_OCzbZhjI6uncNCdA3Omm8NygwBMUmEv60i7u54WrcqeR2JPbaHJ04ufTnTBaANbPMbCIAM0hOKTAWn4bspcE5is">
+            <!-- Project: Deltin Transport -->
+            <article data-tech="php"
+                class="project-card bg-surface border border-outline-variant rounded-xl p-6 flex flex-col justify-between opacity-0 translate-y-8 transition-all duration-700">
+                <div>
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="w-12 h-12 rounded-xl flex items-center justify-center bg-blue-50 text-blue-600 dark:bg-blue-900/20 dark:text-blue-400 border border-blue-100 dark:border-blue-800 flex-shrink-0">
+                            <span class="material-symbols-outlined text-2xl">local_shipping</span>
                         </div>
                         <div>
-                            <h3 class="font-label-caps text-label-caps text-primary mb-stack-sm uppercase">Tech Stack
-                            </h3>
-                            <div class="flex flex-wrap gap-2">
-                                <span
-                                    class="bg-surface-container px-3 py-1 rounded-full font-label-mono text-label-mono text-on-surface-variant border border-outline-variant">PHP</span>
-                                <span
-                                    class="bg-surface-container px-3 py-1 rounded-full font-label-mono text-label-mono text-on-surface-variant border border-outline-variant">MySQL</span>
-
+                            <h3 class="font-headline-md text-xl font-bold text-on-surface">Deltin Transport</h3>
+                            <div class="flex gap-2 mt-1">
+                                <span class="bg-surface-container px-2 py-0.5 rounded text-xs font-label-mono text-on-surface-variant border border-outline-variant">PHP</span>
+                                <span class="bg-surface-container px-2 py-0.5 rounded text-xs font-label-mono text-on-surface-variant border border-outline-variant">MySQL</span>
                             </div>
                         </div>
+                    </div>
+                    <p class="font-body-md text-sm text-on-surface-variant mb-5 leading-relaxed">
+                        A transport and fleet management system consisting of Staff Transport and Fleet Management modules. The platform streamlines employee transportation and vehicle booking operations.
+                    </p>
+                    <div class="border-t border-outline-variant pt-4">
+                        <h4 class="font-label-caps text-[11px] text-primary mb-3 uppercase tracking-wider font-semibold">Key Contributions</h4>
+                        <ul class="space-y-2 text-sm text-on-surface-variant">
+                            <li class="flex items-center gap-2">
+                                <span class="material-symbols-outlined text-primary text-base select-none">check_circle</span>
+                                <span>Developed backend modules and REST APIs.</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="material-symbols-outlined text-primary text-base select-none">check_circle</span>
+                                <span>Implemented staff registration and approval workflow.</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="material-symbols-outlined text-primary text-base select-none">check_circle</span>
+                                <span>Built vehicle and driver allocation functionalities.</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="material-symbols-outlined text-primary text-base select-none">check_circle</span>
+                                <span>Designed booking and transport management processes.</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="material-symbols-outlined text-primary text-base select-none">check_circle</span>
+                                <span>Optimized MySQL queries and database operations.</span>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </article>
 
-            <!-- Project 2: Wellness -->
-            <article
-                class="project-card bg-surface border border-outline-variant rounded-xl p-stack-lg opacity-0 translate-y-8 transition-all duration-700">
-                <div class="grid grid-cols-1 lg:grid-cols-12 gap-stack-lg">
-                    <div class="lg:col-span-8">
-
-                        <h2 class="font-headline-lg text-headline-lg mb-stack-md text-on-surface">Wellness &amp; Period
-                            Tracking Platform</h2>
-                        <div class="space-y-stack-lg">
-                            <div>
-
-                                <p class="font-body-md text-body-md text-on-surface-variant">
-                                    Contributed to the backend development of a health and wellness platform focused on
-                                    tracking, consultation services, and user engagement.
-                                </p>
-                            </div>
-                            <div>
-                                <h3 class="font-label-caps text-label-caps text-tertiary mb-stack-xs uppercase">Overview
-                                </h3>
-                                <p class="font-body-md text-body-md text-on-surface-variant">
-                                    Worked on backend services supporting period tracking, user management, expert
-                                    consultation features, and automated notifications.
-                                </p>
-                            </div>
-                            <div class="gap-stack-lg">
-                                <div>
-                                    <h3 class="font-label-caps text-label-caps text-tertiary mb-stack-xs uppercase">
-                                        Key Contributions
-                                    </h3>
-                                    <p class="font-body-md text-body-md text-on-surface-variant">
-                                        • Developed APIs for health tracking features<br>
-                                        • Built consultation and user management modules<br>
-                                        • Implemented notification workflows<br>
-                                        • Supported secure handling of user-related data<br>
-                                    </p>
-                                </div>
-
-                            </div>
-
-                        </div>
-                    </div>
-                    <div class="lg:col-span-4 flex flex-col gap-stack-lg">
-                        <div
-                            class="h-64 bg-surface-container-high rounded-xl overflow-hidden border border-outline-variant">
-                            <img class="w-full h-full object-cover opacity-90 hover:opacity-100 transition-all duration-500"
-                                alt="Health data visualization interface"
-                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCL-W1kFX9O0CyT0tiECmcKDrFwjRciwl8Itco1EixJGtiGigp5UJMLMwAteNGunsXxOXiPt996AMNRS0p78fFOIAW6svayNSgPrhcKKwAmsk2EvmAe9i-ztXORWJ1vY_6_hOk_baaskgg30_aC9NkTytBrEQZSboVTFTlkTKq5q7dtxcqXF-DeN8KhEWh8pYHHBDLi1rKHcUR-3mfgOXiYFAdPjoXk7xqViwb1Qx25_pJ2aFYfJeWHaWILZTdkV-5gtegHdtWUXgo">
+            <!-- Project: Splitwise -->
+            <article data-tech="node"
+                class="project-card bg-surface border border-outline-variant rounded-xl p-6 flex flex-col justify-between opacity-0 translate-y-8 transition-all duration-700">
+                <div>
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="w-12 h-12 rounded-xl flex items-center justify-center bg-emerald-50 text-emerald-600 dark:bg-emerald-900/20 dark:text-emerald-400 border border-emerald-100 dark:border-emerald-800 flex-shrink-0">
+                            <span class="material-symbols-outlined text-2xl">account_balance_wallet</span>
                         </div>
                         <div>
-                            <h3 class="font-label-caps text-label-caps text-tertiary mb-stack-sm uppercase">Tech Stack
-                            </h3>
-                            <div class="flex flex-wrap gap-2">
-
-                                <span
-                                    class="bg-surface-container px-3 py-1 rounded-full font-label-mono text-label-mono text-on-surface-variant border border-outline-variant">Node.js</span>
-                                <span
-                                    class="bg-surface-container px-3 py-1 rounded-full font-label-mono text-label-mono text-on-surface-variant border border-outline-variant">MySQL</span>
+                            <h3 class="font-headline-md text-xl font-bold text-on-surface">Splitwise</h3>
+                            <div class="flex gap-2 mt-1">
+                                <span class="bg-surface-container px-2 py-0.5 rounded text-xs font-label-mono text-on-surface-variant border border-outline-variant">Node.js</span>
                             </div>
                         </div>
+                    </div>
+                    <p class="font-body-md text-sm text-on-surface-variant mb-5 leading-relaxed">
+                        An expense-sharing application that enables users to create groups, split bills, and track shared expenses.
+                    </p>
+                    <div class="border-t border-outline-variant pt-4">
+                        <h4 class="font-label-caps text-[11px] text-primary mb-3 uppercase tracking-wider font-semibold">Key Contributions</h4>
+                        <ul class="space-y-2 text-sm text-on-surface-variant">
+                            <li class="flex items-center gap-2">
+                                <span class="material-symbols-outlined text-primary text-base select-none">check_circle</span>
+                                <span>Developed RESTful APIs using Node.js.</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="material-symbols-outlined text-primary text-base select-none">check_circle</span>
+                                <span>Implemented JWT-based authentication and authorization.</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="material-symbols-outlined text-primary text-base select-none">check_circle</span>
+                                <span>Built expense calculation and balance settlement logic.</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="material-symbols-outlined text-primary text-base select-none">check_circle</span>
+                                <span>Managed group and transaction data.</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="material-symbols-outlined text-primary text-base select-none">check_circle</span>
+                                <span>Designed efficient database interactions.</span>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </article>
 
-            <!-- Project 3: Transport -->
-            <article
-                class="project-card bg-surface border border-outline-variant rounded-xl p-stack-lg opacity-0 translate-y-8 transition-all duration-700">
-                <div class="grid grid-cols-1 lg:grid-cols-12 gap-stack-lg">
-                    <div class="lg:col-span-8">
-
-                        <h2 class="font-headline-lg text-headline-lg mb-stack-md text-on-surface">Enterprise Transport
-                            Management System</h2>
-                        <div class="space-y-stack-lg">
-                            <div>
-                                <h3 class="font-label-caps text-label-caps text-secondary mb-stack-xs uppercase">
-                                    Overview</h3>
-                                <p class="font-body-md text-body-md text-on-surface-variant">
-                                    Backend system designed to support staff transportation operations, trip allocation,
-                                    attendance tracking, and route management.
-                                </p>
-                            </div>
-                            <div class="gap-stack-lg">
-                                <div>
-                                    <h3 class="font-label-caps text-label-caps text-secondary mb-stack-xs uppercase">
-                                        Key Contributions:</h3>
-                                    <p class="font-body-md text-body-md text-on-surface-variant">
-                                        • Developed APIs for transport requests and scheduling<br>
-                                        • Built trip allocation and route management modules<br>
-                                        • Implemented QR/scan-based attendance workflows<br>
-                                        • Supported operational tracking and reporting processes<br>
-                                    </p>
-                                </div>
-                               
-                            </div>
-                           
-                        </div>
-                    </div>
-                    <div class="lg:col-span-4 flex flex-col gap-stack-lg">
-                        <div
-                            class="h-64 bg-surface-container-high rounded-xl overflow-hidden border border-outline-variant">
-                            <img class="w-full h-full object-cover opacity-90 hover:opacity-100 transition-all duration-500"
-                                alt="Futuristic map interface with interconnected route lines"
-                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuB84qH-hREV1QZi_GWtT__3Ri5DBosZaFzZrsxA3ZHV4UjxRoXq4WEgUSr-sgkcChW38dzOLcG46elqzXSc-9HIaWM6PzBYIh6zf3vo1A3am2hquipkJOG2penly9zCl7_sshOTgo9l7Q9vFPbD4bhCUu0yqtEUbgCwxVjYbTVlT1GmsdilKLcLJCeIMzsFgIlGALcgAivHfGzeR2GlICqup1TMmuJFxtD9D4m-G4vIi3tbAdPtQjkK1AHUrFf7EHNl3vuSyOmmz7k">
+            <!-- Project: DeltinOne -->
+            <article data-tech="php"
+                class="project-card bg-surface border border-outline-variant rounded-xl p-6 flex flex-col justify-between opacity-0 translate-y-8 transition-all duration-700">
+                <div>
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="w-12 h-12 rounded-xl flex items-center justify-center bg-violet-50 text-violet-600 dark:bg-violet-900/20 dark:text-violet-400 border border-violet-100 dark:border-violet-800 flex-shrink-0">
+                            <span class="material-symbols-outlined text-2xl">loyalty</span>
                         </div>
                         <div>
-                            <h3 class="font-label-caps text-label-caps text-secondary mb-stack-sm uppercase">Tech Stack
-                            </h3>
-                            <div class="flex flex-wrap gap-2">
-                               
-                                <span
-                                    class="bg-surface-container px-3 py-1 rounded-full font-label-mono text-label-mono text-on-surface-variant border border-outline-variant">PHP</span>
-                                <span
-                                    class="bg-surface-container px-3 py-1 rounded-full font-label-mono text-label-mono text-on-surface-variant border border-outline-variant">MySQL</span>
+                            <h3 class="font-headline-md text-xl font-bold text-on-surface">DeltinOne</h3>
+                            <div class="flex gap-2 mt-1">
+                                <span class="bg-surface-container px-2 py-0.5 rounded text-xs font-label-mono text-on-surface-variant border border-outline-variant">PHP</span>
+                                <span class="bg-surface-container px-2 py-0.5 rounded text-xs font-label-mono text-on-surface-variant border border-outline-variant">MySQL</span>
                             </div>
                         </div>
+                    </div>
+                    <p class="font-body-md text-sm text-on-surface-variant mb-5 leading-relaxed">
+                        A loyalty management platform comprising an Admin Dashboard, Customer App, and Relationship Manager (RM) App for managing member engagement and loyalty programs.
+                    </p>
+                    <div class="border-t border-outline-variant pt-4">
+                        <h4 class="font-label-caps text-[11px] text-primary mb-3 uppercase tracking-wider font-semibold">Key Contributions</h4>
+                        <ul class="space-y-2 text-sm text-on-surface-variant">
+                            <li class="flex items-center gap-2">
+                                <span class="material-symbols-outlined text-primary text-base select-none">check_circle</span>
+                                <span>Developed APIs for Customer and RM applications.</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="material-symbols-outlined text-primary text-base select-none">check_circle</span>
+                                <span>Built backend modules for loyalty and membership management.</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="material-symbols-outlined text-primary text-base select-none">check_circle</span>
+                                <span>Developed administrative dashboard functionalities.</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="material-symbols-outlined text-primary text-base select-none">check_circle</span>
+                                <span>Managed secure data storage and business logic.</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="material-symbols-outlined text-primary text-base select-none">check_circle</span>
+                                <span>Optimized backend performance and database operations.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Project: PMG -->
+            <article data-tech="php"
+                class="project-card bg-surface border border-outline-variant rounded-xl p-6 flex flex-col justify-between opacity-0 translate-y-8 transition-all duration-700">
+                <div>
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="w-12 h-12 rounded-xl flex items-center justify-center bg-amber-50 text-amber-600 dark:bg-amber-900/20 dark:text-amber-400 border border-amber-100 dark:border-amber-800 flex-shrink-0">
+                            <span class="material-symbols-outlined text-2xl">domain</span>
+                        </div>
+                        <div>
+                            <h3 class="font-headline-md text-xl font-bold text-on-surface">Property Management Group</h3>
+                            <div class="flex gap-2 mt-1">
+                                <span class="bg-surface-container px-2 py-0.5 rounded text-xs font-label-mono text-on-surface-variant border border-outline-variant">PHP</span>
+                                <span class="bg-surface-container px-2 py-0.5 rounded text-xs font-label-mono text-on-surface-variant border border-outline-variant">MySQL</span>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="font-body-md text-sm text-on-surface-variant mb-5 leading-relaxed">
+                        A property management website and CRM platform used to manage properties, clients, and proposal generation.
+                    </p>
+                    <div class="border-t border-outline-variant pt-4">
+                        <h4 class="font-label-caps text-[11px] text-primary mb-3 uppercase tracking-wider font-semibold">Key Contributions</h4>
+                        <ul class="space-y-2 text-sm text-on-surface-variant">
+                            <li class="flex items-center gap-2">
+                                <span class="material-symbols-outlined text-primary text-base select-none">check_circle</span>
+                                <span>Developed backend modules for CRM operations.</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="material-symbols-outlined text-primary text-base select-none">check_circle</span>
+                                <span>Built property and client management features.</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="material-symbols-outlined text-primary text-base select-none">check_circle</span>
+                                <span>Implemented proposal generation workflows.</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="material-symbols-outlined text-primary text-base select-none">check_circle</span>
+                                <span>Designed and maintained MySQL database structures.</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="material-symbols-outlined text-primary text-base select-none">check_circle</span>
+                                <span>Developed administrative functionalities for the website.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Project: Garima Period Tracker -->
+            <article data-tech="node"
+                class="project-card bg-surface border border-outline-variant rounded-xl p-6 flex flex-col justify-between opacity-0 translate-y-8 transition-all duration-700">
+                <div>
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="w-12 h-12 rounded-xl flex items-center justify-center bg-rose-50 text-rose-600 dark:bg-rose-900/20 dark:text-rose-400 border border-rose-100 dark:border-rose-800 flex-shrink-0">
+                            <span class="material-symbols-outlined text-2xl">calendar_today</span>
+                        </div>
+                        <div>
+                            <h3 class="font-headline-md text-xl font-bold text-on-surface">Garima Period Tracker</h3>
+                            <div class="flex gap-2 mt-1">
+                                <span class="bg-surface-container px-2 py-0.5 rounded text-xs font-label-mono text-on-surface-variant border border-outline-variant">Node.js</span>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="font-body-md text-sm text-on-surface-variant mb-5 leading-relaxed">
+                        A healthcare application that helps users track menstrual cycles, receive reminders, and access articles related to similar symptoms and women's health.
+                    </p>
+                    <div class="border-t border-outline-variant pt-4">
+                        <h4 class="font-label-caps text-[11px] text-primary mb-3 uppercase tracking-wider font-semibold">Key Contributions</h4>
+                        <ul class="space-y-2 text-sm text-on-surface-variant">
+                            <li class="flex items-center gap-2">
+                                <span class="material-symbols-outlined text-primary text-base select-none">check_circle</span>
+                                <span>Developed REST APIs for mobile application integration.</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="material-symbols-outlined text-primary text-base select-none">check_circle</span>
+                                <span>Implemented JWT-based authentication.</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="material-symbols-outlined text-primary text-base select-none">check_circle</span>
+                                <span>Built cycle tracking and reminder functionalities.</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="material-symbols-outlined text-primary text-base select-none">check_circle</span>
+                                <span>Managed user health data securely.</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="material-symbols-outlined text-primary text-base select-none">check_circle</span>
+                                <span>Developed backend support for health-related content delivery.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Project: EventGoa -->
+            <article data-tech="php"
+                class="project-card bg-surface border border-outline-variant rounded-xl p-6 flex flex-col justify-between opacity-0 translate-y-8 transition-all duration-700">
+                <div>
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="w-12 h-12 rounded-xl flex items-center justify-center bg-indigo-50 text-indigo-600 dark:bg-indigo-900/20 dark:text-indigo-400 border border-indigo-100 dark:border-indigo-800 flex-shrink-0">
+                            <span class="material-symbols-outlined text-2xl">festival</span>
+                        </div>
+                        <div>
+                            <h3 class="font-headline-md text-xl font-bold text-on-surface">EventGoa</h3>
+                            <div class="flex gap-2 mt-1">
+                                <span class="bg-surface-container px-2 py-0.5 rounded text-xs font-label-mono text-on-surface-variant border border-outline-variant">PHP</span>
+                                <span class="bg-surface-container px-2 py-0.5 rounded text-xs font-label-mono text-on-surface-variant border border-outline-variant">MySQL</span>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="font-body-md text-sm text-on-surface-variant mb-5 leading-relaxed">
+                        An event management platform where administrators can manage events and users can register for Free, Standard, and Premium listings.
+                    </p>
+                    <div class="border-t border-outline-variant pt-4">
+                        <h4 class="font-label-caps text-[11px] text-primary mb-3 uppercase tracking-wider font-semibold">Key Contributions</h4>
+                        <ul class="space-y-2 text-sm text-on-surface-variant">
+                            <li class="flex items-center gap-2">
+                                <span class="material-symbols-outlined text-primary text-base select-none">check_circle</span>
+                                <span>Developed backend modules for event management.</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="material-symbols-outlined text-primary text-base select-none">check_circle</span>
+                                <span>Built user registration and listing workflows.</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="material-symbols-outlined text-primary text-base select-none">check_circle</span>
+                                <span>Created APIs for frontend integration.</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="material-symbols-outlined text-primary text-base select-none">check_circle</span>
+                                <span>Managed event and user-related database operations.</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="material-symbols-outlined text-primary text-base select-none">check_circle</span>
+                                <span>Developed administrative control panel features.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Project: Deltin Ticketing -->
+            <article data-tech="php"
+                class="project-card bg-surface border border-outline-variant rounded-xl p-6 flex flex-col justify-between opacity-0 translate-y-8 transition-all duration-700">
+                <div>
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="w-12 h-12 rounded-xl flex items-center justify-center bg-cyan-50 text-cyan-600 dark:bg-cyan-900/20 dark:text-cyan-400 border border-cyan-100 dark:border-cyan-800 flex-shrink-0">
+                            <span class="material-symbols-outlined text-2xl">local_activity</span>
+                        </div>
+                        <div>
+                            <h3 class="font-headline-md text-xl font-bold text-on-surface">Deltin Ticketing</h3>
+                            <div class="flex gap-2 mt-1">
+                                <span class="bg-surface-container px-2 py-0.5 rounded text-xs font-label-mono text-on-surface-variant border border-outline-variant">PHP</span>
+                                <span class="bg-surface-container px-2 py-0.5 rounded text-xs font-label-mono text-on-surface-variant border border-outline-variant">MySQL</span>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="font-body-md text-sm text-on-surface-variant mb-5 leading-relaxed">
+                        A group booking and ticket management system handling the complete lifecycle from quotation creation to invoicing.
+                    </p>
+                    <div class="border-t border-outline-variant pt-4">
+                        <h4 class="font-label-caps text-[11px] text-primary mb-3 uppercase tracking-wider font-semibold">Key Contributions</h4>
+                        <ul class="space-y-2 text-sm text-on-surface-variant">
+                            <li class="flex items-center gap-2">
+                                <span class="material-symbols-outlined text-primary text-base select-none">check_circle</span>
+                                <span>Developed frontend-integrated APIs.</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="material-symbols-outlined text-primary text-base select-none">check_circle</span>
+                                <span>Built group quotation and proforma generation modules.</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="material-symbols-outlined text-primary text-base select-none">check_circle</span>
+                                <span>Implemented guest import functionality.</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="material-symbols-outlined text-primary text-base select-none">check_circle</span>
+                                <span>Created customer rate package management features.</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="material-symbols-outlined text-primary text-base select-none">check_circle</span>
+                                <span>Automated invoice generation for group bookings.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Project: ESG -->
+            <article data-tech="php"
+                class="project-card bg-surface border border-outline-variant rounded-xl p-6 flex flex-col justify-between opacity-0 translate-y-8 transition-all duration-700">
+                <div>
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="w-12 h-12 rounded-xl flex items-center justify-center bg-teal-50 text-teal-600 dark:bg-teal-900/20 dark:text-teal-400 border border-teal-100 dark:border-teal-800 flex-shrink-0">
+                            <span class="material-symbols-outlined text-2xl">task_alt</span>
+                        </div>
+                        <div>
+                            <h3 class="font-headline-md text-xl font-bold text-on-surface">ESG</h3>
+                            <div class="flex gap-2 mt-1">
+                                <span class="bg-surface-container px-2 py-0.5 rounded text-xs font-label-mono text-on-surface-variant border border-outline-variant">PHP</span>
+                                <span class="bg-surface-container px-2 py-0.5 rounded text-xs font-label-mono text-on-surface-variant border border-outline-variant">MySQL</span>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="font-body-md text-sm text-on-surface-variant mb-5 leading-relaxed">
+                        An event planning and workflow management platform for handling quotations, approvals, task allocation, and project tracking.
+                    </p>
+                    <div class="border-t border-outline-variant pt-4">
+                        <h4 class="font-label-caps text-[11px] text-primary mb-3 uppercase tracking-wider font-semibold">Key Contributions</h4>
+                        <ul class="space-y-2 text-sm text-on-surface-variant">
+                            <li class="flex items-center gap-2">
+                                <span class="material-symbols-outlined text-primary text-base select-none">check_circle</span>
+                                <span>Developed event planning and management modules.</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="material-symbols-outlined text-primary text-base select-none">check_circle</span>
+                                <span>Built quotation and approval workflows.</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="material-symbols-outlined text-primary text-base select-none">check_circle</span>
+                                <span>Implemented task allocation and status tracking.</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="material-symbols-outlined text-primary text-base select-none">check_circle</span>
+                                <span>Enabled team members to raise queries and update task status.</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="material-symbols-outlined text-primary text-base select-none">check_circle</span>
+                                <span>Integrated email notifications for task updates.</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="material-symbols-outlined text-primary text-base select-none">check_circle</span>
+                                <span>Implemented Google Calendar integration for assigned tasks.</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="material-symbols-outlined text-primary text-base select-none">check_circle</span>
+                                <span>Designed backend business logic and database operations.</span>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </article>
@@ -376,23 +663,65 @@
             menuBtn.setAttribute('aria-expanded', String(!isOpen));
         });
 
+        // Filtering logic
+        const filterBtns = document.querySelectorAll('[data-filter]');
+        const projectCards = document.querySelectorAll('.project-card');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Update active button styles
+                filterBtns.forEach(b => {
+                    b.classList.remove('bg-primary', 'text-on-primary');
+                    b.classList.add('bg-surface-container', 'text-on-surface-variant');
+                });
+                btn.classList.remove('bg-surface-container', 'text-on-surface-variant');
+                btn.classList.add('bg-primary', 'text-on-primary');
+
+                const filterValue = btn.getAttribute('data-filter');
+
+                projectCards.forEach(card => {
+                    const cardTech = card.getAttribute('data-tech');
+                    if (filterValue === 'all' || cardTech === filterValue) {
+                        card.classList.remove('hidden');
+                        // Trigger simple transition
+                        setTimeout(() => {
+                            card.classList.add('opacity-100', 'translate-y-0');
+                            card.classList.remove('opacity-0', 'translate-y-8');
+                        }, 50);
+                    } else {
+                        card.classList.add('hidden');
+                        card.classList.remove('opacity-100', 'translate-y-0');
+                        card.classList.add('opacity-0', 'translate-y-8');
+                    }
+                });
+            });
+        });
+
         // Hover lift on project cards
         document.querySelectorAll('.project-card').forEach(card => {
-            card.addEventListener('mouseenter', () => card.style.transform = 'translateY(-4px)');
-            card.addEventListener('mouseleave', () => card.style.transform = 'translateY(0px)');
+            card.addEventListener('mouseenter', () => {
+                if (!card.classList.contains('hidden')) {
+                    card.style.transform = 'translateY(-6px)';
+                }
+            });
+            card.addEventListener('mouseleave', () => {
+                if (!card.classList.contains('hidden')) {
+                    card.style.transform = 'translateY(0px)';
+                }
+            });
         });
 
         // Scroll-reveal for project cards
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
-                if (entry.isIntersecting) {
+                if (entry.isIntersecting && !entry.target.classList.contains('hidden')) {
                     entry.target.classList.add('opacity-100', 'translate-y-0');
                     entry.target.classList.remove('opacity-0', 'translate-y-8');
                 }
             });
         }, { threshold: 0.1 });
 
-        document.querySelectorAll('.project-card').forEach(card => observer.observe(card));
+        projectCards.forEach(card => observer.observe(card));
     </script>
 </body>
 
