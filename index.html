@@ -554,7 +554,7 @@
                     </div>
 
                     <!-- Right: Contact Form -->
-                    <form action="https://formspree.io/f/xeewewvr" method="POST"
+                    <form id="contact-form" action="https://formspree.io/f/xeewewvr" method="POST"
                         class="surface-2-card rounded-xl p-8 space-y-5">
 
                         <input type="hidden" name="_subject" value="New Portfolio Contact Form Submission" />
@@ -578,12 +578,7 @@
                                     class="bg-surface border border-outline-variant rounded-lg px-4 py-3 font-body-md text-body-md text-on-surface placeholder:text-outline focus:outline-none focus:border-primary transition-colors" />
                             </div>
                         </div>
-                        <div class="flex flex-col gap-1.5">
-                            <label for="contact-subject"
-                                class="font-label-md text-label-md text-on-surface-variant">Subject</label>
-                            <input id="contact-subject" type="text" name="subject" placeholder="What's this about?"
-                                class="bg-surface border border-outline-variant rounded-lg px-4 py-3 font-body-md text-body-md text-on-surface placeholder:text-outline focus:outline-none focus:border-primary transition-colors" />
-                        </div>
+
                         <div class="flex flex-col gap-1.5">
                             <label for="contact-message"
                                 class="font-label-md text-label-md text-on-surface-variant">Message</label>
@@ -668,45 +663,46 @@
         };
         window.addEventListener('scroll', updateNav);
 
-        // Contact form handler
         const contactForm = document.getElementById('contact-form');
         const formStatus = document.getElementById('contact-form-status');
-        contactForm.addEventListener('submit', function (e) {
+
+        contactForm.addEventListener('submit', async (e) => {
             e.preventDefault();
-            if (!contactForm.checkValidity()) {
-                contactForm.reportValidity();
-                return;
-            }
-            const btn = contactForm.querySelector('button[type="submit"]');
-            btn.disabled = true;
-            btn.textContent = 'Sending…';
 
-            const formData = new FormData(contactForm);
+            const button = contactForm.querySelector('button[type="submit"]');
 
-            fetch("/", {
-                method: "POST",
-                headers: { "Content-Type": "application/x-www-form-urlencoded" },
-                body: new URLSearchParams(formData).toString()
-            })
-                .then(response => {
-                    if (response.ok) {
-                        formStatus.textContent = 'Thank you! Your message has been sent successfully.';
-                        formStatus.classList.remove('hidden', 'text-error');
-                        formStatus.classList.add('text-primary');
-                        contactForm.reset();
-                    } else {
-                        throw new Error('Form submission failed');
+            button.disabled = true;
+            button.textContent = 'Sending...';
+
+            try {
+                const response = await fetch(
+                    'https://formspree.io/f/xeewewvr',
+                    {
+                        method: 'POST',
+                        body: new FormData(contactForm),
+                        headers: {
+                            Accept: 'application/json'
+                        }
                     }
-                })
-                .catch(error => {
-                    formStatus.textContent = 'Oops! There was a problem submitting your form. Please try again.';
-                    formStatus.classList.remove('hidden', 'text-primary');
-                    formStatus.classList.add('text-error');
-                })
-                .finally(() => {
-                    btn.disabled = false;
-                    btn.textContent = 'Send Message';
-                });
+                );
+
+                if (response.ok) {
+                    formStatus.textContent =
+                        '✓ Thank you! Your message has been sent successfully.';
+                    formStatus.classList.remove('hidden');
+
+                    contactForm.reset();
+                } else {
+                    throw new Error();
+                }
+            } catch {
+                formStatus.textContent =
+                    'Something went wrong. Please try again.';
+                formStatus.classList.remove('hidden');
+            }
+
+            button.disabled = false;
+            button.textContent = 'Send Message';
         });
 
         // Scroll-reveal animation
