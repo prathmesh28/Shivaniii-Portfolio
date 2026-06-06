@@ -4,7 +4,8 @@
 <head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta name="description" content="Shivani Nair is a Backend Software Developer specializing in Node.js, PHP, REST APIs, cloud integrations, authentication systems, and scalable business applications." />
+    <meta name="description"
+        content="Shivani Nair is a Backend Software Developer specializing in Node.js, PHP, REST APIs, cloud integrations, authentication systems, and scalable business applications." />
     <meta name="robots" content="index, follow">
     <meta name="author" content="Shivani Nair">
     <meta name="theme-color" content="#0058cc">
@@ -14,14 +15,16 @@
     <link rel="preconnect" href="https://cdn.tailwindcss.com" crossorigin>
     <link rel="preload" as="image" href="images/shivani-nair-backend-software-developer.png" fetchpriority="high">
     <meta property="og:title" content="Shivani Nair | Backend Software Developer | Node.js & PHP Developer" />
-    <meta property="og:description" content="Shivani Nair is a Backend Software Developer specializing in Node.js, PHP, REST APIs, cloud integrations, authentication systems, and scalable business applications." />
+    <meta property="og:description"
+        content="Shivani Nair is a Backend Software Developer specializing in Node.js, PHP, REST APIs, cloud integrations, authentication systems, and scalable business applications." />
     <meta property="og:image" content="https://shivaninair.dev/images/shivani-nair-backend-software-developer.png" />
     <meta property="og:url" content="https://shivaninair.dev/" />
     <meta property="og:type" content="website" />
     <meta name="twitter:card" content="summary_large_image" />
-     <meta name="twitter:title" content="Shivani Nair | Backend Software Developer | Node.js & PHP Developer" />
-    <meta name="twitter:description" content="Shivani Nair is a Backend Software Developer specializing in Node.js, PHP, REST APIs, cloud integrations, authentication systems, and scalable business applications." />
-   <meta name="twitter:image" content="https://shivaninair.dev/images/shivani-nair-backend-software-developer.png" />
+    <meta name="twitter:title" content="Shivani Nair | Backend Software Developer | Node.js & PHP Developer" />
+    <meta name="twitter:description"
+        content="Shivani Nair is a Backend Software Developer specializing in Node.js, PHP, REST APIs, cloud integrations, authentication systems, and scalable business applications." />
+    <meta name="twitter:image" content="https://shivaninair.dev/images/shivani-nair-backend-software-developer.png" />
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -194,7 +197,7 @@
                     href="projects.html">Projects</a>
             </div>
             <div class="flex items-center gap-stack-md">
-              <button id="mobile-menu-btn" class="md:hidden material-symbols-outlined text-on-surface"
+                <button id="mobile-menu-btn" class="md:hidden material-symbols-outlined text-on-surface"
                     aria-expanded="false" aria-controls="mobile-menu">menu</button>
             </div>
         </div>
@@ -240,7 +243,8 @@
                             Projects</a>
                         <a href="Shivani-Nair-Backend-Software-Developer-Resume.pdf" download>
                             <button
-                                class="border border-outline-variant text-on-surface px-stack-lg py-stack-md font-label-caps text-label-caps rounded-lg hover:border-primary hover:bg-surface-container transition-all">Download Resume</button>
+                                class="border border-outline-variant text-on-surface px-stack-lg py-stack-md font-label-caps text-label-caps rounded-lg hover:border-primary hover:bg-surface-container transition-all">Download
+                                Resume</button>
                         </a>
                     </div>
                     <div class="grid grid-cols-2 sm:grid-cols-4 gap-stack-lg">
@@ -307,7 +311,7 @@
                             complex processes, and building solutions that are straightforward, maintainable, and
                             dependable. My focus is on writing clean code, making systems easier to manage, and
                             delivering features that provide real value to the people using them.</p>
-                      
+
                     </div>
                 </div>
             </div>
@@ -549,7 +553,8 @@
                     </div>
 
                     <!-- Right: Contact Form -->
-                    <form class="surface-2-card rounded-xl p-8 space-y-5" id="contact-form" novalidate>
+                    <form class="surface-2-card rounded-xl p-8 space-y-5" id="contact-form" name="contact" data-netlify="true" novalidate>
+                        <input type="hidden" name="form-name" value="contact" />
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
                             <div class="flex flex-col gap-1.5">
                                 <label for="contact-name"
@@ -667,18 +672,33 @@
             const btn = contactForm.querySelector('button[type="submit"]');
             btn.disabled = true;
             btn.textContent = 'Sending…';
-            // Use mailto as fallback since there's no backend
-            const name = document.getElementById('contact-name').value;
-            const email = document.getElementById('contact-email').value;
-            const subject = document.getElementById('contact-subject').value || 'Portfolio Contact';
-            const message = document.getElementById('contact-message').value;
-            const mailto = `mailto:shivani.nair1201@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent('From: ' + name + ' <' + email + '>\n\n' + message)}`;
-            window.location.href = mailto;
-            formStatus.textContent = 'Opening your email client…';
-            formStatus.classList.remove('hidden', 'text-error');
-            formStatus.classList.add('text-on-surface-variant');
-            btn.disabled = false;
-            btn.textContent = 'Send Message';
+
+            const formData = new FormData(contactForm);
+
+            fetch("/", {
+                method: "POST",
+                headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                body: new URLSearchParams(formData).toString()
+            })
+            .then(response => {
+                if (response.ok) {
+                    formStatus.textContent = 'Thank you! Your message has been sent successfully.';
+                    formStatus.classList.remove('hidden', 'text-error');
+                    formStatus.classList.add('text-primary');
+                    contactForm.reset();
+                } else {
+                    throw new Error('Form submission failed');
+                }
+            })
+            .catch(error => {
+                formStatus.textContent = 'Oops! There was a problem submitting your form. Please try again.';
+                formStatus.classList.remove('hidden', 'text-primary');
+                formStatus.classList.add('text-error');
+            })
+            .finally(() => {
+                btn.disabled = false;
+                btn.textContent = 'Send Message';
+            });
         });
 
         // Scroll-reveal animation
