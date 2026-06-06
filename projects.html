@@ -106,26 +106,39 @@
 <body class="overflow-x-hidden font-body-md">
 
     <!-- TopNavBar -->
-    <nav class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-outline-variant">
+    <nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant">
         <div class="flex justify-between items-center h-16 px-gutter max-w-container-max mx-auto">
             <a href="index.html" class="font-headline-md text-headline-md font-bold text-on-surface">Shivani Nair</a>
             <div class="hidden md:flex gap-stack-lg items-center">
-                <a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors"
+                <a class="text-on-surface-variant hover:text-primary transition-colors font-label-caps text-label-caps"
                     href="index.html#home">Home</a>
-                <a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors"
+                <a class="text-on-surface-variant hover:text-primary transition-colors font-label-caps text-label-caps"
                     href="index.html#about">About</a>
-                <a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors"
+                <a class="text-on-surface-variant hover:text-primary transition-colors font-label-caps text-label-caps"
                     href="index.html#stack">Tech Stack</a>
-                <a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors"
+                <a class="text-on-surface-variant hover:text-primary transition-colors font-label-caps text-label-caps"
                     href="index.html#experience">Experience</a>
-                <a class="font-label-caps text-label-caps text-primary font-bold border-b-2 border-primary pb-1"
+                <a class="text-primary font-bold border-b-2 border-primary pb-1 font-label-caps text-label-caps"
                     href="projects.html">Projects</a>
             </div>
             <div class="flex items-center gap-stack-md">
-                <button
-                    class="material-symbols-outlined text-on-surface-variant hover:text-primary transition-all">light_mode</button>
-                <button class="md:hidden material-symbols-outlined text-on-surface">menu</button>
+                <button id="mobile-menu-btn" class="md:hidden material-symbols-outlined text-on-surface"
+                    aria-expanded="false" aria-controls="mobile-menu">menu</button>
             </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu"
+            class="hidden md:hidden bg-surface/95 backdrop-blur-md border-t border-outline-variant px-gutter py-stack-md flex flex-col gap-stack-md">
+            <a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors py-2 border-b border-outline-variant"
+                href="index.html#home">Home</a>
+            <a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors py-2 border-b border-outline-variant"
+                href="index.html#about">About</a>
+            <a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors py-2 border-b border-outline-variant"
+                href="index.html#stack">Stack</a>
+            <a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors py-2 border-b border-outline-variant"
+                href="index.html#experience">Experience</a>
+            <a class="font-label-caps text-label-caps text-primary font-bold py-2"
+                href="projects.html">Projects</a>
         </div>
     </nav>
 
@@ -353,6 +366,16 @@
     </footer>
 
     <script>
+        // Mobile menu toggle
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuBtn.addEventListener('click', () => {
+            const isOpen = !mobileMenu.classList.contains('hidden');
+            mobileMenu.classList.toggle('hidden', isOpen);
+            menuBtn.textContent = isOpen ? 'menu' : 'close';
+            menuBtn.setAttribute('aria-expanded', String(!isOpen));
+        });
+
         // Hover lift on project cards
         document.querySelectorAll('.project-card').forEach(card => {
             card.addEventListener('mouseenter', () => card.style.transform = 'translateY(-4px)');
