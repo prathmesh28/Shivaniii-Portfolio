@@ -486,7 +486,8 @@
 
         <!-- Education & Certifications -->
         <section class="py-section-gap max-w-container-max mx-auto px-gutter transition-all duration-700">
-            <h2 class="font-headline-lg text-headline-lg text-on-surface mb-16">Education &amp; Excellence</h2>
+            <h2 class="font-headline-lg text-headline-lg text-on-surface text-center mb-16">Education &amp; Excellence
+            </h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-stack-lg">
                 <div class="surface-2-card p-stack-lg rounded-xl">
                     <span
@@ -553,8 +554,15 @@
                     </div>
 
                     <!-- Right: Contact Form -->
-                    <form class="surface-2-card rounded-xl p-8 space-y-5" id="contact-form" name="contact" data-netlify="true" novalidate>
-                        <input type="hidden" name="form-name" value="contact" />
+                    <form action="https://formspree.io/f/xeewewvr" method="POST"
+                        class="surface-2-card rounded-xl p-8 space-y-5">
+
+                        <input type="hidden" name="_subject" value="New Portfolio Contact Form Submission" />
+
+                        <input type="text" name="_gotcha" style="display:none" />
+
+                        <input type="hidden" name="_next" value="https://shivaninair.netlify.app/thank-you.html" />
+
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
                             <div class="flex flex-col gap-1.5">
                                 <label for="contact-name"
@@ -680,25 +688,25 @@
                 headers: { "Content-Type": "application/x-www-form-urlencoded" },
                 body: new URLSearchParams(formData).toString()
             })
-            .then(response => {
-                if (response.ok) {
-                    formStatus.textContent = 'Thank you! Your message has been sent successfully.';
-                    formStatus.classList.remove('hidden', 'text-error');
-                    formStatus.classList.add('text-primary');
-                    contactForm.reset();
-                } else {
-                    throw new Error('Form submission failed');
-                }
-            })
-            .catch(error => {
-                formStatus.textContent = 'Oops! There was a problem submitting your form. Please try again.';
-                formStatus.classList.remove('hidden', 'text-primary');
-                formStatus.classList.add('text-error');
-            })
-            .finally(() => {
-                btn.disabled = false;
-                btn.textContent = 'Send Message';
-            });
+                .then(response => {
+                    if (response.ok) {
+                        formStatus.textContent = 'Thank you! Your message has been sent successfully.';
+                        formStatus.classList.remove('hidden', 'text-error');
+                        formStatus.classList.add('text-primary');
+                        contactForm.reset();
+                    } else {
+                        throw new Error('Form submission failed');
+                    }
+                })
+                .catch(error => {
+                    formStatus.textContent = 'Oops! There was a problem submitting your form. Please try again.';
+                    formStatus.classList.remove('hidden', 'text-primary');
+                    formStatus.classList.add('text-error');
+                })
+                .finally(() => {
+                    btn.disabled = false;
+                    btn.textContent = 'Send Message';
+                });
         });
 
         // Scroll-reveal animation
