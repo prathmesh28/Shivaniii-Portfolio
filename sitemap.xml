@@ -7,15 +7,9 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://shivaninair.netlify.app/about-shivani-nair.html</loc>
-    <lastmod>2026-06-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
     <loc>https://shivaninair.netlify.app/projects.html</loc>
     <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.9</priority>
   </url>
 </urlset>
