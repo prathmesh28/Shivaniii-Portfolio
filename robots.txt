@@ -1,6 +1,4 @@
 User-agent: *
 Allow: /
-Disallow: /js/
-Disallow: /css/
 
-Sitemap: https://shivaninair.dev/sitemap.xml
+Sitemap: https://shivaninair.netlify.app/sitemap.xml
